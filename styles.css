@@ -23,8 +23,7 @@ body {
 /* ~~~~~~~~~~~~~~~~~~~~ Header/footer ~~~~~~~~~~~~~~~~~~~~ */
 
 header, footer {
-    width: 95vw;
-    margin: 0.5vw;
+    width: 100%;
 
     box-sizing:border-box;
     border-style:solid;
@@ -40,9 +39,11 @@ header, footer {
 }
 header {
     padding: 1vw;
+    margin: 1vw 0 0 0;
 }
 footer {
     padding: 1vw;
+    margin: 0 0 1vw 0;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~ h1, h2, h... ~~~~~~~~~~~~~~~~~~~~ */
