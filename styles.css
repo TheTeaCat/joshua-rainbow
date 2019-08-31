@@ -1,0 +1,133 @@
+/* ~~~~~~~~~~~~~~~~~~~~ body ~~~~~~~~~~~~~~~~~~~~ */
+
+body {
+    margin:0;
+
+    min-height:100%;
+    width:100%;
+
+    font-family:consolas;
+    font-size:10pt;
+
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~ Header/footer ~~~~~~~~~~~~~~~~~~~~ */
+
+header, footer {
+    width: 99%;
+    margin: 0.5%;
+
+    box-sizing:border-box;
+    border-style:solid;
+    border-width:1px;
+
+    background: repeating-linear-gradient(
+        -45deg,
+        #fff,
+        #fff 10px,
+        #e2e2e2 10px,
+        #e2e2e2 20px
+      );    
+}
+header {
+    padding: 1%;
+}
+footer {
+    padding: 1%;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~ h1, h2, h... ~~~~~~~~~~~~~~~~~~~~ */
+
+h1 {
+    margin:0;
+    font-size:200%;
+    font-weight:bold;
+}
+h2 {
+    margin:0;
+    font-size:150%;
+    font-weight:normal;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~ nav ~~~~~~~~~~~~~~~~~~~~ */
+
+nav button, nav h2, nav ul{
+    display:inline;
+}
+nav li {
+    display:inline;
+}
+nav li:before {
+    content: " ~ ";
+}
+.collapsible-content {
+    margin: 0.5%;
+    padding: 0.5%;
+
+    box-sizing:border-box;
+    border-style:solid;
+    border-width:1px;
+
+    display:none;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~ gallery ~~~~~~~~~~~~~~~~~~~~ */
+
+#gallery {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1% 0 1% 0;
+}
+
+#gallery .gallery-image-box {
+    flex-grow:1;
+    margin:0.5%;
+    display: flex;
+    align-items: center;
+}
+
+@media (orientation: landscape) {
+    #gallery .gallery-image-box {
+        flex-basis:32%;
+    }
+}
+
+@media (orientation: portrait) {
+    #gallery .gallery-image-box {
+        flex-basis:49%;
+    }
+}
+
+#gallery img {
+    max-width:100%;
+    max-height:70vh;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~ contact ~~~~~~~~~~~~~~~~~~~~ */
+
+#contact-details {
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction:column;
+}
+
+#contact-details h1 {
+    margin: 2%;
+}
+
+#contact-details ul {
+    list-style-type: none;
+}
+
+#contact-details ul li::before {
+    content: " ~ "
+}
