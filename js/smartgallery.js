@@ -1,5 +1,5 @@
 function generateImageHTML(imageURL) {
-    return "<div class=\"gallery-image-box\"><img src=\"" + imageURL + "\"></div>"
+    return "<div class=\"gallery-image-box\"><img onload=\"this.style.opacity = '1'\" src=\"" + imageURL + "\"></div>"
 }
 
 window.addEventListener("load", function () {
