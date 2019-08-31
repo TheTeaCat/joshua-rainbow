@@ -1,12 +1,10 @@
 /* ~~~~~~~~~~~~~~~~~~~~ body ~~~~~~~~~~~~~~~~~~~~ */
 
 body {
-    margin:0;
-
-    min-height:100%;
+    min-height:100vh;
     width:100%;
 
-    font-family:consolas;
+    font-family:'Courier New', Courier, monospace;
     font-size:10pt;
 
     display:flex;
@@ -14,11 +12,17 @@ body {
     justify-content: space-between;
 }
 
+@media (orientation: portrait) {
+    body {
+        font-size: 20pt;
+    }
+}
+
 /* ~~~~~~~~~~~~~~~~~~~~ Header/footer ~~~~~~~~~~~~~~~~~~~~ */
 
 header, footer {
-    width: 99%;
-    margin: 0.5%;
+    width: 99vw;
+    margin: 0.5vw;
 
     box-sizing:border-box;
     border-style:solid;
@@ -33,29 +37,26 @@ header, footer {
       );    
 }
 header {
-    padding: 1%;
+    padding: 1vw;
 }
 footer {
-    padding: 1%;
+    padding: 1vw;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~ h1, h2, h... ~~~~~~~~~~~~~~~~~~~~ */
 
 h1 {
-    margin:0;
     font-size:200%;
     font-weight:bold;
-}
-h2 {
-    margin:0;
-    font-size:150%;
-    font-weight:normal;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~ nav ~~~~~~~~~~~~~~~~~~~~ */
 
 nav button, nav h2, nav ul{
     display:inline;
+}
+nav button {
+    font-size: 100%;
 }
 nav li {
     display:inline;
@@ -85,7 +86,7 @@ nav li:before {
 
 #gallery .gallery-image-box {
     flex-grow:1;
-    margin:0.5%;
+    margin:0.5vw;
     display: flex;
     align-items: center;
 }
@@ -121,7 +122,7 @@ nav li:before {
 }
 
 #contact-details h1 {
-    margin: 2%;
+    margin: 2vw;
 }
 
 #contact-details ul {

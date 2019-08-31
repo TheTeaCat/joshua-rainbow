@@ -5,11 +5,11 @@ window.addEventListener("load", function () {
     function getCollapsibleListener(i) {
         return function () {
             if (contents[i].style.display == "block") {
-                collapsibles[i].innerHTML = "+";
+                collapsibles[i].innerHTML = collapsibles[i].innerHTML.replace("-","+");
                 contents[i].style.display = "none";
                 localStorage.setItem("Collapsible #"+i, false)
             } else {
-                collapsibles[i].innerHTML = "-";
+                collapsibles[i].innerHTML = collapsibles[i].innerHTML.replace("+","-");
                 contents[i].style.display = "block";
                 localStorage.setItem("Collapsible #"+i, true)
             }
@@ -19,7 +19,7 @@ window.addEventListener("load", function () {
     for (var i = 0; i < collapsibles.length; i++) {
         collapsibles[i].addEventListener("click", getCollapsibleListener(i))
         if (localStorage.getItem("Collapsible #"+i) == "true") {
-            collapsibles[i].innerHTML = "-";
+            collapsibles[i].innerHTML = collapsibles[i].innerHTML.replace("+","-")
             contents[i].style.display = "block";
         }
     }
