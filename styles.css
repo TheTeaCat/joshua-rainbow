@@ -16,6 +16,8 @@ body {
 @media (orientation: portrait) {
     body {
         font-size: 20pt;
+        padding: 1vw 2vw 1vw 2vw;
+        min-height:98vh;        
     }
 }
 
