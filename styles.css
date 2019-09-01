@@ -80,10 +80,11 @@ nav li:before {
 #gallery {
     width:95vw;
     margin: 0.5vw;
-
+    
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items:flex-start;
 }
 #gallery .gallery-image-box {
     flex-grow:1;
