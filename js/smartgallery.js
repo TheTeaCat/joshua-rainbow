@@ -23,8 +23,7 @@ window.addEventListener("load", function () {
 
         function getOrientationChecker(img) { 
             return function() {
-                console.log("toot");
-                if (img.width > img.height) {
+                if (img.width == 1000 && img.width > img.height) {
                     img.parentNode.className = "gallery-image-box-landscape";
                 }
             }
