@@ -84,9 +84,8 @@ nav li:before {
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items:flex-start;
 }
-#gallery .gallery-image-box {
+.gallery-image-box, .gallery-image-box-landscape {
     flex-grow:1;
     margin: 0.5vw;
     display: flex;
@@ -96,10 +95,16 @@ nav li:before {
     #gallery .gallery-image-box {
         flex-basis:32%;
     }
+    #gallery .gallery-image-box-landscape {
+        flex-basis:64%;
+    }
 }
 @media (orientation: portrait) {
     #gallery .gallery-image-box {
         flex-basis:48%;
+    }
+    #gallery .gallery-image-box-landscape {
+        flex-basis:96%;
     }
 }
 #gallery img {
