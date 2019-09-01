@@ -3,9 +3,18 @@ function generateImageHTML(imageURL) {
 }
 
 window.addEventListener("load", function () {
-    var url = new URL(document.URL);
-    var gallery = url.searchParams.get("gallery");
 
+    var gallery = null;
+
+    if (document.URL.split("?").length > 1) {
+        var params = document.URL.split("?")[1].split("&");
+        for (var i = 0; i < params.length; i++) {
+            if (params[i].split("=")[0] == "gallery") {
+                gallery = params[i].split("=")[1]
+            }
+        }    
+    }
+    
     var galleryElement = document.getElementById("gallery")
     galleryElement.innerHTML = "";    
 

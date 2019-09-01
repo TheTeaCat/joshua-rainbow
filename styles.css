@@ -104,6 +104,7 @@ nav li:before {
 #gallery img {
     max-width:100%;
     max-height:75vh;
+    flex: 0 0 auto; /*internet explorer is just broken...*/
 
     display: block;
     margin-left: auto;
