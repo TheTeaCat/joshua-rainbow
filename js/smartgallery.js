@@ -29,6 +29,7 @@ window.addEventListener("load", function () {
         var request = new XMLHttpRequest();
         request.open("GET",URL+"/img-list.txt");
         request.responseType = "text";
+
         request.onload = function() {
             if (request.status == 200) {
                 var galleryElement = document.getElementById("gallery")
@@ -42,6 +43,7 @@ window.addEventListener("load", function () {
                 }
             }
         };
+
         request.send();
     }
 })
