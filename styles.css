@@ -16,8 +16,7 @@ body {
 @media (orientation: portrait) {
     body {
         font-size: 20pt;
-        padding: 1vw 2vw 1vw 2vw;
-        min-height:98vh;        
+        min-height:100vh;
     }
 }
 
@@ -82,7 +81,7 @@ nav li:before {
 /* ~~~~~~~~~~~~~~~~~~~~ gallery ~~~~~~~~~~~~~~~~~~~~ */
 
 #gallery {
-    width:96vw;
+    width:100%;
     
     display:flex;
     flex-wrap: wrap;
@@ -141,12 +140,12 @@ nav li:before {
 }
 @media (orientation: landscape) {
     .featured-gallery {
-        flex-basis:20vw;
+        flex-basis:20%;
     }
 }
 @media (orientation: portrait) {
     .featured-gallery {
-        flex-basis:40vw;
+        flex-basis:40%;
     }
 }
 .featured-gallery a {
