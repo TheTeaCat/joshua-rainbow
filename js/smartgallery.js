@@ -12,6 +12,8 @@ function getOrientationChecker(imgID) {
 }
 
 window.addEventListener("load", function () {
+    var galleryElement = document.getElementById("gallery")
+
     var gallery = null;
 
     if (document.URL.split("?").length > 1) {
@@ -32,8 +34,8 @@ window.addEventListener("load", function () {
 
         request.onload = function() {
             if (request.status == 200) {
-                var galleryElement = document.getElementById("gallery")
                 galleryElement.innerHTML = "";
+                galleryElement.style.visibility = "visible";
 
                 var imgs =  request.response.split("\n");
 
@@ -45,5 +47,7 @@ window.addEventListener("load", function () {
         };
 
         request.send();
+    } else {
+        galleryElement.style.visibility = "visible";            
     }
 })

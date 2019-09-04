@@ -88,6 +88,8 @@ nav li:before {
     flex-wrap: wrap;
     justify-content: center;
     flex-shrink: 0;
+
+    visibility: hidden;
 }
 #gallery h2 {
     width: 100%;
