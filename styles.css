@@ -89,9 +89,11 @@ nav li:before {
     justify-content: center;
     flex-shrink: 0;
 }
-#gallery h1 {
+#gallery h2 {
     width: 100%;
     text-align: center;
+}#gallery a {
+    font-weight:bold;
 }
 .gallery-image-box, .gallery-image-box-landscape {
     flex-grow:1;
