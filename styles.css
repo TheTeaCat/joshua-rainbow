@@ -2,9 +2,9 @@
 
 body {
     height:100vh;
-    width:96vw;
+    width:98vw;
     overflow-x: hidden;
-    padding: 0 2vw 0 2vw;
+    margin: 0 1vw 0 1vw;
     
     font-family:'Courier New', Courier, monospace;
     font-size:10pt;
@@ -47,6 +47,10 @@ h1 {
     font-size:200%;
     font-weight:bold;
 }
+h2 {
+    font-size:150%;
+    font-weight:bold;
+}
 
 /* ~~~~~~~~~~~~~~~~~~~~ nav ~~~~~~~~~~~~~~~~~~~~ */
 
@@ -78,12 +82,16 @@ nav li:before {
 /* ~~~~~~~~~~~~~~~~~~~~ gallery ~~~~~~~~~~~~~~~~~~~~ */
 
 #gallery {
-    width:95vw;
-    margin: 0.5vw;
+    width:96vw;
     
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
+    flex-shrink: 0;
+}
+#gallery h1 {
+    width: 100%;
+    text-align: center;
 }
 .gallery-image-box, .gallery-image-box-landscape {
     flex-grow:1;
@@ -117,6 +125,32 @@ nav li:before {
     margin-right: auto;
 }
 
+/* ~~~~~~~~~~~~~~~~~~~~ gallery index page ~~~~~~~~~~~~~~~~~~~~ */
+
+#title-image-box, .featured-gallery {
+    flex-grow:1;
+    margin: 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#title-image-box {
+    flex-basis:100%;
+}
+@media (orientation: landscape) {
+    .featured-gallery {
+        flex-basis:20vw;
+    }
+}
+@media (orientation: portrait) {
+    .featured-gallery {
+        flex-basis:40vw;
+    }
+}
+.featured-gallery a {
+    max-width:100%;
+    margin: 0 0 1vw 0;
+}
 /* ~~~~~~~~~~~~~~~~~~~~ contact ~~~~~~~~~~~~~~~~~~~~ */
 
 #contact-details {

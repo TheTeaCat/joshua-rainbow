@@ -2,6 +2,14 @@ function generateImageHTML(imageURL, i) {
     return "<div class=\"gallery-image-box\"><img id=\"img" + i + "\" src=\"" + imageURL + "\"></div>"
 }
 
+function getOrientationChecker(img) { 
+    return function() {
+        if (img.width > img.height) {
+            img.parentNode.className = "gallery-image-box-landscape";
+        }
+    }
+}
+
 window.addEventListener("load", function () {
 
     var gallery = null;
@@ -14,20 +22,12 @@ window.addEventListener("load", function () {
             }
         }    
     }
-    
-    var galleryElement = document.getElementById("gallery")
-    galleryElement.innerHTML = "";    
 
     if (gallery != null) {
+        var galleryElement = document.getElementById("gallery")
+        galleryElement.innerHTML = "";    
+    
         URL = "img/" + gallery.replace(".","/");
-
-        function getOrientationChecker(img) { 
-            return function() {
-                if (img.width > img.height) {
-                    img.parentNode.className = "gallery-image-box-landscape";
-                }
-            }
-        }
         
         function getNextImage (URL, i) {
             var img = new Image();
@@ -49,8 +49,5 @@ window.addEventListener("load", function () {
     
         getNextImage(URL, 1);
     
-    } else {
-        galleryElement.innerHTML += generateImageHTML("img/index.jpg");
     }
-
 })
