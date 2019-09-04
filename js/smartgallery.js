@@ -2,8 +2,9 @@ function generateImageHTML(imageURL, i) {
     return "<div class=\"gallery-image-box\"><img id=\"img" + i + "\" src=\"" + imageURL + "\"></div>"
 }
 
-function getOrientationChecker(img) { 
+function getOrientationChecker(imgID) { 
     return function() {
+        var img = document.getElementById(imgID);
         if (img.width > img.height) {
             img.parentNode.className = "gallery-image-box-landscape";
         }
@@ -11,7 +12,6 @@ function getOrientationChecker(img) {
 }
 
 window.addEventListener("load", function () {
-
     var gallery = null;
 
     if (document.URL.split("?").length > 1) {
@@ -24,30 +24,24 @@ window.addEventListener("load", function () {
     }
 
     if (gallery != null) {
-        var galleryElement = document.getElementById("gallery")
-        galleryElement.innerHTML = "";    
-    
         URL = "img/" + gallery.replace(".","/");
-        
-        function getNextImage (URL, i) {
-            var img = new Image();
-            var imgURL = URL+"/"+i+".jpg";
-            img.addEventListener("load",function() {
-                console.log("Got", imgURL);
-                galleryElement.innerHTML += generateImageHTML(imgURL, i);
+                
+        var request = new XMLHttpRequest();
+        request.open("GET",URL+"/img-list.txt");
+        request.responseType = "text";
+        request.onload = function() {
+            if (request.status == 200) {
+                var galleryElement = document.getElementById("gallery")
+                galleryElement.innerHTML = "";
 
-                var img = document.getElementById("img"+i);
-                img.addEventListener("load", getOrientationChecker(img));
+                var imgs =  request.response.split("\n");
 
-                getNextImage(URL,i+1);
-            })
-            img.addEventListener("error", function() {
-                console.log("End of images.");
-            })
-            img.src = imgURL;
-        }
-    
-        getNextImage(URL, 1);
-    
+                for (var i = 0; i < imgs.length; i++) {
+                    galleryElement.innerHTML += generateImageHTML(URL+"/"+imgs[i], i);
+                    document.getElementById("img"+i).addEventListener("load", getOrientationChecker("img"+i));
+                }
+            }
+        };
+        request.send();
     }
 })
