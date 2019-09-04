@@ -61,6 +61,7 @@ nav button {
     font-family:'Courier New', Courier, monospace;     
     font-size: 100%;
     background: #c8c8c8;
+
 }
 nav li {
     display:inline;
@@ -153,6 +154,7 @@ nav li:before {
 }
 .featured-gallery a {
     max-width:100%;
+    text-align: center;
     margin: 0 0 1vw 0;
 }
 

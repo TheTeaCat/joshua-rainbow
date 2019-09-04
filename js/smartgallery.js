@@ -43,6 +43,8 @@ window.addEventListener("load", function () {
                     galleryElement.innerHTML += generateImageHTML(URL+"/"+imgs[i], i);
                     document.getElementById("img"+i).addEventListener("load", getOrientationChecker("img"+i));
                 }
+            } else {
+                galleryElement.style.visibility = "visible";                
             }
         };
 
