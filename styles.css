@@ -23,8 +23,6 @@ body {
 /* ~~~~~~~~~~~~~~~~~~~~ Header/footer ~~~~~~~~~~~~~~~~~~~~ */
 
 header, footer {
-    width: 100%;
-
     box-sizing:border-box;
     border-style:solid;
     border-width:1px;
@@ -32,6 +30,7 @@ header, footer {
     background: #e2e2e2;
 }
 header {
+    max-width:98vw;
     padding: 1vw;
     margin: 1vw 0 0 0;
 }
@@ -53,10 +52,11 @@ h2 {
 
 /* ~~~~~~~~~~~~~~~~~~~~ nav ~~~~~~~~~~~~~~~~~~~~ */
 
-nav button, nav h2, nav ul{   
-    display:inline;
+.collapsible-container {
+    display:inline-block;
 }
 nav button {
+    margin: 0.5vw 0.5vw 0 0;
     font-family:'Courier New', Courier, monospace;     
     font-size: 100%;
     background: #c8c8c8;
@@ -68,7 +68,7 @@ nav li:before {
     content: " ~ ";
 }
 .collapsible-content {
-    margin: 0.5vw;
+    margin: 0.5vw 0 0 0;
     padding: 0.5vw;
 
     box-sizing:border-box;
