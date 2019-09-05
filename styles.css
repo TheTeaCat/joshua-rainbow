@@ -142,6 +142,12 @@ nav li:before {
 #title-image-box {
     flex-basis:100%;
 }
+#gallery hr {
+    width: 75vw;
+}
+.hr-container {
+    flex-basis:100%;    
+}
 @media (orientation: landscape) {
     .featured-gallery {
         flex-basis:20%;
