@@ -6,7 +6,9 @@ function getOrientationChecker(imgID) {
     return function() {
         var img = document.getElementById(imgID);
         if (img.width > img.height) {
-            img.parentNode.className = "gallery-image-box-landscape";
+            img.parentNode.setAttribute("orientation","landscape");
+        } else {
+            img.parentNode.setAttribute("orientation","portrait");            
         }
     }
 }

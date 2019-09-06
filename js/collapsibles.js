@@ -1,20 +1,16 @@
 
 window.addEventListener("load", function () {
-    var collapsibles = document.getElementsByClassName("collapsible-button");
-    var contents = document.getElementsByClassName("collapsible-content");
+    var buttons = document.getElementsByClassName("collapsible-button");
+    var containers = document.getElementsByClassName("collapsible-container");
 
     function toggleCollapsible(i) {
-        if (contents[i].style.display == "block") {
-            collapsibles[i].innerHTML = collapsibles[i].innerHTML.replace("-","+");
-            collapsibles[i].style.background = "#c8c8c8";
-            contents[i].style.display = "none";
-            contents[i].parentNode.style.display = "inline-block";
+        if (containers[i].getAttribute("expanded") == "true") {
+            buttons[i].innerHTML = buttons[i].innerHTML.replace("-","+");
+            containers[i].setAttribute("expanded","false");
             localStorage.setItem("Collapsible #"+i, false);        
         } else {
-            collapsibles[i].innerHTML = collapsibles[i].innerHTML.replace("+","-");
-            collapsibles[i].style.background = "#fff";
-            contents[i].style.display = "block";
-            contents[i].parentNode.style.display = "block";
+            buttons[i].innerHTML = buttons[i].innerHTML.replace("+","-");
+            containers[i].setAttribute("expanded","true");
             localStorage.setItem("Collapsible #"+i, true);        
         }
     }
@@ -25,8 +21,8 @@ window.addEventListener("load", function () {
         }
     }
 
-    for (var i = 0; i < collapsibles.length; i++) {
-        collapsibles[i].addEventListener("click", getCollapsibleListener(i));
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener("click", getCollapsibleListener(i));
         if (localStorage.getItem("Collapsible #"+i) == "true") {
             toggleCollapsible(i);
         }
