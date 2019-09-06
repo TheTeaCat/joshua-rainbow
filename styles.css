@@ -25,19 +25,14 @@ body {
 header, footer {
     display:inline-block;
 
+    padding: 1vw;
+    margin: 1vw 0 1vw 0;
+
     box-sizing:border-box;
     border-style:solid;
     border-width:1px;
 
     background: #e2e2e2;
-}
-header {
-    padding: 1vw;
-    margin: 1vw 0 0 0;
-}
-footer {
-    padding: 1vw;
-    margin: 0 0 1vw 0;
 }
 @media (orientation:portrait) {
     header, footer {
