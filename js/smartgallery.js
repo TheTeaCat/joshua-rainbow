@@ -1,5 +1,9 @@
 function generateImageHTML(imageURL, i) {
-    return "<div class=\"gallery-image-box\"><img id=\"img" + i + "\" src=\"" + imageURL + "\"></div>"
+    return "<div class=\"gallery-box\"><img id=\"img" + i + "\" src=\"" + imageURL + "\"></div>"
+}
+
+function generateParagraphHTML(content) {
+    return "<div class=\"gallery-box\" content=\"text\"><p>" + content + "</p></div>"
 }
 
 function getOrientationChecker(imgID) { 
@@ -39,11 +43,15 @@ window.addEventListener("load", function () {
                 galleryElement.innerHTML = "";
                 galleryElement.style.visibility = "visible";
 
-                var imgs =  request.response.split("\n");
+                var elems =  request.response.split("\n");
 
-                for (var i = 0; i < imgs.length; i++) {
-                    galleryElement.innerHTML += generateImageHTML(URL+"/"+imgs[i], i);
-                    document.getElementById("img"+i).addEventListener("load", getOrientationChecker("img"+i));
+                for (var i = 0; i < elems.length; i++) {
+                    if (elems[i][0] == "\t") {
+                        galleryElement.innerHTML += generateImageHTML(URL+"/"+elems[i], i);
+                        document.getElementById("img"+i).addEventListener("load", getOrientationChecker("img"+i));    
+                    } else {
+                        galleryElement.innerHTML += generateParagraphHTML(elems[i])
+                    }
                 }
             } else {
                 galleryElement.style.visibility = "visible";                
