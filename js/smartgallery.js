@@ -5,7 +5,7 @@ function generateImageHTML(imageURL, i) {
 function getOrientationChecker(imgID) { 
     return function() {
         var img = document.getElementById(imgID);
-        if (img.width > img.height) {
+        if (img.width >= img.height) {
             img.parentNode.setAttribute("orientation","landscape");
         } else {
             img.parentNode.setAttribute("orientation","portrait");            
