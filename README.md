@@ -1,5 +1,5 @@
 # joshua-rainbow
 
-a shit website for my pictures
+a website for my pictures
 
-See: https://pedanticat.github.io/joshua-rainbow/
+See: https://joshuarainbow.co.uk/
