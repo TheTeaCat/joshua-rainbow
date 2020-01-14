@@ -8,6 +8,7 @@ body {
     
     font-family:'Courier New', Courier, monospace;
     font-size:10pt;
+    text-size-adjust:none;
 
     display:flex;
     flex-direction:column;
