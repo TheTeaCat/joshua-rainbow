@@ -145,8 +145,6 @@ nav li:before {
     border-width:1px;
 
     background: #e2e2e2;
-
-    text-align: center;
 }
 @media (orientation: landscape) {
     #gallery .gallery-box[orientation="portrait"] {
