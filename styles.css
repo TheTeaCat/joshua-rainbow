@@ -126,18 +126,25 @@ nav li:before {
     margin: 0.5vw;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 .gallery-box[content="text"] {
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
     box-sizing: border-box;
     padding:5vw;
-    flex-basis:48%;
 
+    flex-basis:48%;
 }
 .gallery-box[content="text"] p {
     display: inline;
-    width:100%;
+    padding: 1vw;
+
+    border-style:solid;
+    border-width:1px;
+
+    background: #e2e2e2;
+
     text-align: center;
 }
 @media (orientation: landscape) {
