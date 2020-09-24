@@ -1,21 +1,19 @@
 $bg: #fff;
 $text-colour: #000;
 $highlight-colour: #a00;
-$light-grey: #e2e2e2;
-
-$font-size: 16px;
-$font-size-m: $font-size*1.2;
-$font-size-l: $font-size*1.5;
 
 $spacer: 4px;
+@media(orientation:portrait) {
+    $spacer: 4px;
+}
 
 $max-width:1280px;
 $breakpoint-1-width:1080px;
 $breakpoint-2-width:768px;
 
-@media(orientation:portrait) {
-    $spacer: 4px;
-}
+$font-size: 16px;
+$font-size-m: $font-size*1.2;
+$font-size-l: $font-size*1.5;
 
 /* sans-serif font styles */
 @mixin sansItalic() {
