@@ -63,7 +63,7 @@ export default {
     title: 'Home'
   },
   data() {return{
-    displayed_tile:null,
+    displayed_tile:0,
     gallery_interval:null,
   }},
   methods:{
