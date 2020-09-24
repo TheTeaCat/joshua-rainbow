@@ -14,7 +14,7 @@
           </div>
         </li>
         <div class="bottom-bar">
-          <button class="prev" @click="prev" v-if="displayed_tile != null">
+          <button class="prev" @click="prev" v-if="gallery_interval != null">
             <svg xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" class="arrow">
               <line x1="0%" y1="50%" x2="100%" y2="50%"/>
               <line x1="0%" y1="50%" x2="50%" y2="100%"/>
@@ -27,7 +27,7 @@
             {{ $page.allFrontPage.edges[0].node.featured_pages[displayed_tile].title }}
           </g-link>
 
-          <button class="next" @click="next" v-if="displayed_tile != null">
+          <button class="next" @click="next" v-if="gallery_interval != null">
             <span class="link">Next</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" class="arrow">
               <line x1="0%" y1="50%" x2="100%" y2="50%"/>
