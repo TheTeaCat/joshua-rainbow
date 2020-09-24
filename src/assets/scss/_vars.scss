@@ -1,0 +1,29 @@
+$bg: #fff;
+$text-colour: #000;
+$highlight-colour: #a00;
+$light-grey: #e2e2e2;
+
+$font-size: 16px;
+$font-size-m: $font-size*1.2;
+$font-size-l: $font-size*1.5;
+
+$spacer: 4px;
+
+$max-width:1280px;
+$breakpoint-1-width:1080px;
+$breakpoint-2-width:768px;
+
+
+@media(orientation:portrait) {
+    $spacer: 4px;
+}
+
+@mixin stripes($angle) {
+    background: repeating-linear-gradient(
+        $angle,
+        rgba(0,0,0,0),
+        rgba(0,0,0,0) 5px,
+        rgba(240,240,240,1) 5px,
+        rgba(240,240,240,1) 6px
+        );
+}

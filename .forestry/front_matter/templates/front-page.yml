@@ -1,0 +1,29 @@
+---
+label: Front Page
+hide_body: true
+fields:
+- name: featured_pages
+  type: field_group_list
+  fields:
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Title
+  - name: link
+    type: text
+    config:
+      required: false
+    label: Link
+  - name: cover_image
+    type: file
+    config:
+      maxSize: 64
+    label: Cover Image
+  config:
+    min: 
+    max: 
+    labelField: title
+  label: Featured Pages
+pages:
+- content/frontpage.json

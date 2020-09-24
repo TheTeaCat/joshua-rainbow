@@ -1,0 +1,55 @@
+---
+label: About Page
+hide_body: true
+fields:
+- name: cover_image
+  type: file
+  config:
+    maxSize: 64
+  label: Cover Image
+- name: name
+  type: text
+  config:
+    required: false
+  label: Name
+- name: bio
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Bio
+- name: social_links
+  type: field_group_list
+  fields:
+  - name: link
+    type: text
+    config:
+      required: false
+    label: Link
+  - name: platform
+    type: select
+    default: []
+    config:
+      required: false
+      options:
+      - email
+      - github
+      - instagram
+      - lastfm
+      - linkedin
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: Platform
+  config:
+    min: 
+    max: 
+    labelField: platform
+  label: Social Links
+pages:
+- content/about.json

@@ -1,0 +1,27 @@
+{
+  "name": "Joshua Rainbow O'Sullivan",
+  "bio": "I'm a software developer. I like golang and vue.js. I love tea and cats. I make pictures in my spare time.",
+  "social_links": [
+    {
+      "link": "mailto:joshua.r.osullivan@gmail.com",
+      "platform": "email"
+    },
+    {
+      "link": "https://github.com/TheTeaCat",
+      "platform": "github"
+    },
+    {
+      "link": "https://www.linkedin.com/in/joshua-o-sullivan/",
+      "platform": "linkedin"
+    },
+    {
+      "link": "https://www.instagram.com/the.tea.cat/",
+      "platform": "instagram"
+    },
+    {
+      "link": "https://www.last.fm/user/TheTeaCat",
+      "platform": "lastfm"
+    }
+  ],
+  "cover_image": "/media/2020/09/20/me.jpg"
+}

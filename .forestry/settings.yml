@@ -1,0 +1,42 @@
+---
+new_page_extension: md
+auto_deploy: false
+admin_path: 
+webhook_url: 
+sections:
+- type: document
+  path: content/frontpage.json
+  label: Front Page
+- type: document
+  path: content/about.json
+  label: About
+- type: directory
+  path: content/programming
+  label: Programming
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/photography
+  label: Photography
+  create: documents
+  match: "*"
+  new_doc_ext: json
+  templates:
+  - photography-page
+- type: directory
+  path: content/darkroom
+  label: Darkroom
+  create: all
+  match: "**/*"
+upload_dir: static/media
+public_path: "/media"
+front_matter_path: ''
+use_front_matter_path: false
+file_template: ":year:/:month:/:day:/:filename:"
+build:
+  preview_output_directory: dist
+  install_dependencies_command: npm install
+  preview_docker_image: node:10
+  mount_path: "/srv"
+  working_dir: "/srv"
+  instant_preview_command: npm run develop

@@ -1,0 +1,44 @@
+---
+label: Programming Page
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: Title
+  config:
+    required: true
+- name: cover_image
+  type: file
+  config:
+    maxSize: 64
+  label: Cover Image
+- name: short_description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Short Description
+- type: text
+  name: link
+  label: Link
+  config:
+    required: true
+- type: datetime
+  name: date
+  label: Date
+  config:
+    date_format: DD/MM/YYYY
+    time_format: ''
+    export_format: YYYY-MM-DD
+    required: true
+pages:
+- content/programming/COM1008-Assignment-2.md
+- content/programming/COM2004-OCR-Assignment.md
+- content/programming/COM2108-Assignment-3.md
+- content/programming/lastfm-tag-cloud.md
+- content/programming/picto.md
+- content/programming/romanesgo.md
+- content/programming/spotify-albums-by-year.md

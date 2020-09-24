@@ -1,0 +1,88 @@
+@import "_vars.scss";
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+/* ~~~~~~~~~~~~~~~~~~~~ body ~~~~~~~~~~~~~~~~~~~~ */
+
+html {
+    height:100vh;
+
+    font-family: 'Lora', serif;
+    font-size:16px;
+    text-size-adjust:none;
+
+    background: $bg;
+    color: $text-colour
+}
+
+body {
+    min-height:100%;
+    min-height: 100%;
+    box-sizing: border-box;
+
+    display:flex;
+    flex-direction: column;
+}  
+
+/* ~~~~~~~~~~~~~~~~~~~~ h1, h2, h... ~~~~~~~~~~~~~~~~~~~~ */
+
+h1, h2, h3, h4, h5 {
+    font-weight: 700;
+}
+h1 { font-size: $font-size-l; }
+h2 { font-size: $font-size-m; }
+
+/* ~~~~~~~~~~~~~~~~~~~~ strong ~~~~~~~~~~~~~~~~~~~~ */
+
+strong {
+    font-weight: 700;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~ a ~~~~~~~~~~~~~~~~~~~~ */
+
+.link {
+    color:$text-colour;
+    text-decoration: none;
+    position:relative;
+    transition: 0.5s color ease;
+    &::after {
+        content:" ";
+        position: absolute;
+        left:0; bottom:0;
+        border-bottom: 1px solid $highlight-colour;
+        width:0;
+        transition: 0.5s width ease;
+    }
+    &:hover {
+        color: $highlight-colour;
+        &::after {
+            width:100%;
+        }
+    }
+    &.active--exact {
+        &:hover {
+            color: inherit;
+        }
+        &::after {
+            width:0;
+        }
+    }
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~ ul, ol, li ~~~~~~~~~~~~~~~~~~~~ */
+
+ul {
+    list-style-type: circle;
+}
+ol {
+    list-style-type: decimal;
+}
+ul, ol {
+    margin-top: $spacer * 4;
+    margin-bottom: $spacer * 4;
+    padding-left: $spacer * 8;
+}
+ul li, ol li {
+    margin-top: $spacer * 2;
+}
+ul li:first-child, ol li:first-child {
+    margin-top: 0;
+}
