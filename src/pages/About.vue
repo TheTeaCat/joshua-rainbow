@@ -137,6 +137,8 @@ export default {
       }
       .listening-to {
         width:100%;
+        padding-top:$spacer*2;
+        border-top: 1px dotted $text-colour;
       }
     }
   }

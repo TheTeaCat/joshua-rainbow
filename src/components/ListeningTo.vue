@@ -115,9 +115,6 @@ export default {
 
 <style scoped lang="scss">
 .listening-to {
-  padding-top:$spacer*2;
-  border-top: 1px dotted $text-colour;
-
   display:flex;
   align-items: center;
   flex-wrap: wrap;
