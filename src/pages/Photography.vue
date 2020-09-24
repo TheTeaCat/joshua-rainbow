@@ -41,40 +41,43 @@ export default {
 <style lang="scss" scoped>
 .main {
   flex-grow:1;
+
   display:flex;
   flex-direction: column;;
   align-items: center;
   justify-content: center;
+
   .list-cont {
     display:flex;
     flex-direction:row;
     align-items: flex-start;
+
     .title {
       margin-right: $spacer*4;
       line-height: $font-size-l;
+      @include serifBig();
     }
+
     .categories-list {
-      list-style: none;
-      margin:0;padding:0;
       display:flex;
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
+      
       .category-li {
         line-height: $font-size-l;
+
         margin-top: $spacer;
         &:first-child {
           margin-top:$spacer/2;
         }
+
         .category-link {
-          text-transform: uppercase;
-          font-family: 'Josefin Sans', sans-serif;
-          font-weight:300;
-          font-style: italic;
-          font-size: $font-size-m;
+          @include sansItalicUpperMedium();
        }
       }
     }
+    
     @media(max-width:$breakpoint-1-width) {
       flex-direction:column;
       .title {

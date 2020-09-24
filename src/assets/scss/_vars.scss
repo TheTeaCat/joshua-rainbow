@@ -13,17 +13,45 @@ $max-width:1280px;
 $breakpoint-1-width:1080px;
 $breakpoint-2-width:768px;
 
-
 @media(orientation:portrait) {
     $spacer: 4px;
 }
 
-@mixin stripes($angle) {
-    background: repeating-linear-gradient(
-        $angle,
-        rgba(0,0,0,0),
-        rgba(0,0,0,0) 5px,
-        rgba(240,240,240,1) 5px,
-        rgba(240,240,240,1) 6px
-        );
+/* sans-serif font styles */
+@mixin sansItalic() {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+@mixin sansItalicUpper() {
+    @include sansItalic();
+    text-transform: uppercase;
+}
+@mixin sansItalicUpperBold() {
+    @include sansItalicUpper();
+    font-weight:400;
+}
+@mixin sansItalicUpperMedium() {
+    @include sansItalicUpper();
+    font-size:$font-size-m;    
+}
+@mixin sansItalicUpperLarge() {
+    @include sansItalicUpper();
+    font-size:$font-size-l;    
+}
+@mixin sansItalicUpperLargeBold() { 
+    @include sansItalicUpperLarge();
+    font-weight:400;
+}
+
+/* serif font styles */
+@mixin serifBoldItalic() {
+    font-family: 'Lora', serif;
+    font-weight:700;
+    font-style: italic;
+}
+@mixin serifBig() {
+    font-family: 'Lora', serif;
+    font-size: $font-size-l;
+    font-weight:700;
 }

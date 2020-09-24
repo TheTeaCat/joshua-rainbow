@@ -1,6 +1,5 @@
 @import "_vars.scss";
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
-/* ~~~~~~~~~~~~~~~~~~~~ body ~~~~~~~~~~~~~~~~~~~~ */
 
 html {
     height:100vh;
@@ -20,23 +19,7 @@ body {
 
     display:flex;
     flex-direction: column;
-}  
-
-/* ~~~~~~~~~~~~~~~~~~~~ h1, h2, h... ~~~~~~~~~~~~~~~~~~~~ */
-
-h1, h2, h3, h4, h5 {
-    font-weight: 700;
 }
-h1 { font-size: $font-size-l; }
-h2 { font-size: $font-size-m; }
-
-/* ~~~~~~~~~~~~~~~~~~~~ strong ~~~~~~~~~~~~~~~~~~~~ */
-
-strong {
-    font-weight: 700;
-}
-
-/* ~~~~~~~~~~~~~~~~~~~~ a ~~~~~~~~~~~~~~~~~~~~ */
 
 .link {
     color:$text-colour;
@@ -65,24 +48,4 @@ strong {
             width:0;
         }
     }
-}
-
-/* ~~~~~~~~~~~~~~~~~~~~ ul, ol, li ~~~~~~~~~~~~~~~~~~~~ */
-
-ul {
-    list-style-type: circle;
-}
-ol {
-    list-style-type: decimal;
-}
-ul, ol {
-    margin-top: $spacer * 4;
-    margin-bottom: $spacer * 4;
-    padding-left: $spacer * 8;
-}
-ul li, ol li {
-    margin-top: $spacer * 2;
-}
-ul li:first-child, ol li:first-child {
-    margin-top: 0;
 }

@@ -61,27 +61,25 @@ export default {
   margin: 0 auto;
 
   .header {
-    align-self:flex-start;
     align-self: stretch;
+
     padding: $spacer*4 $spacer*2 $spacer*3 $spacer*2;
     border-bottom: 1px dotted $text-colour;
+
     .header-nav {
       display:inline;
+
       .header-links {
         display:flex;
         justify-content: space-between;
-        margin: 0;
-        padding-left:0;
+
         .header-link-li {
           display:inline-block;
-          margin:0;
+          
           .header-link {
-            text-transform: uppercase;
-            font-family: 'Josefin Sans', sans-serif;
-            font-weight:300;
-            font-style: italic;
+            @include sansItalicUpper();
             &.active--exact {
-              font-weight:400;
+              @include sansItalicUpperBold();
             }
           }
         }
@@ -95,16 +93,18 @@ export default {
   @media(max-width:$breakpoint-1-width) {
     .header {
       z-index:1;
+      
       .hamburger-button {
-        margin-left: $spacer*2;
+        margin-left: $spacer;
+
         display:inline-flex;
-        text-transform: uppercase;
-        font-family: 'Josefin Sans', sans-serif;
-        font-weight:400;
-        font-style: italic;
+
+        @include sansItalicUpperBold();
+
         .link {
           margin-top:$spacer/2;
         }
+
         .hamburger-icon, .cross-icon {
           stroke: $text-colour;
           transition: stroke 0.5s ease;
@@ -119,39 +119,56 @@ export default {
           }
         }
       }
+
       .header-nav {
-        display:none;
         z-index:-1;
-        display:block;
+
         position:absolute;
         left:0;
         top:0;
         width:100%;
         height:100vh;
+
         padding-top:$spacer*12;
         box-sizing: border-box;
-        opacity:0;
+
         pointer-events: none;
+        opacity:0;
         transition: opacity 0.5s ease;
+        
         .header-links {
           height:100%;
+
           flex-direction:column;
           justify-content: center;
           align-items: center;
-          background: rgba(255,255,255,0.9);
+          
           .header-link-li {
             padding: $spacer 0;
             .header-link {
-              font-size: $font-size-l;
+              @include sansItalicUpperLarge();
+              &.active--exact {
+                @include sansItalicUpperLargeBold();
+              }
             }
           }
         }
       }
     }
+    
     &.nav-shown {
       height:100vh;
       overflow:hidden;
-      .header {
+
+      .header {        
+        background: rgba(255,255,255,0.9);
+        
+        .header-nav {
+          background: rgba(255,255,255,0.9);
+          pointer-events: unset;
+          opacity:1;
+        }
+
         .hamburger-button {
           .hamburger-icon {
             display:none;
@@ -159,10 +176,6 @@ export default {
           .cross-icon {
             display:inline;
           }
-        }
-        .header-nav {
-          pointer-events: unset;
-          opacity:1;
         }
       }
     }

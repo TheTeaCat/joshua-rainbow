@@ -49,30 +49,37 @@ export default {
 <style lang="scss" scoped>
 .main {
   flex-grow:1;
+
   display:flex;
   align-items: center;
+
   .programming-ol {
-    list-style:none;
-    margin:0;
     padding: $spacer*2;
     padding-top: $spacer*4;
+
     width:100%;
+    display:flex;
+    flex-wrap:wrap;
+
     .programming-li {
-      padding:0;
       margin:0 auto;
+      margin-left:0;
       margin-bottom:$spacer*8;
       &:last-child {
         margin-bottom:$spacer*4;
       }
+
       width:50%;
+
       min-height:100px;
+
       display:inline-flex;
       align-items: center;
+
       position:relative;
       .cover-image-cont {
         position:absolute;
-        top:50px;
-        left:50px;
+        top:50px; left:50px;
         transform:translate(-50%,-50%);
         max-height:100px;
         max-width:100px;
@@ -81,44 +88,55 @@ export default {
           max-height:100%;
         }
       }
+
       .info {
         padding-left: 100px + $spacer*3;
         padding-right: $spacer*3;
+
         .title {
           padding-bottom: $spacer*2;
         }
+
         .date {
           padding-bottom: $spacer;
-          text-transform: uppercase;
-          font-family: 'Josefin Sans', sans-serif;
-          font-weight:300;
+          @include sansItalicUpper();
         }
+
         .description {
           width:100%;
           max-width:400px;
         }
       }
     }
-    @media(max-width:$breakpoint-1-width) {
+  }
+
+  @media(max-width:$breakpoint-1-width) {
+    align-items: flex-start;
+
+    .programming-ol {
       flex-direction: column;
       flex-wrap:nowrap;
-      align-items: flex-start;
+      align-items: center;
+
       .programming-li {
+        margin-right:0;
+
         min-height:70px;
-        display:flex;
-        width:100%;
         max-width:470px+$spacer*2;
-          .cover-image-cont {
-            top:35px;
-            left:35px;
-            max-width:70px;
-            max-height:70px;
-          }
-          .info {
-            padding-right: 0;
-            padding-left: 70px + $spacer*2;
-            max-width:100%;
-          }
+        width:100%;
+
+        .cover-image-cont {
+          top:35px;
+          left:35px;
+          max-width:70px;
+          max-height:70px;
+        }
+        
+        .info {
+          padding-right: 0;
+          padding-left: 70px + $spacer*2;
+          max-width:100%;
+        }
       }
     }
   }

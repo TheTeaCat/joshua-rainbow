@@ -52,60 +52,65 @@ export default {
 <style lang="scss" scoped>
 .main {
   display:flex;
+  justify-content: space-around;  
   flex-direction: row;
-  justify-content: space-around;
   @media(max-width:$breakpoint-1-width) {
     flex-direction:column;
   }
+
   .info-cont {
-    width:400px;
     margin: 0 auto;
+    padding: $spacer*4;
+    padding-top: $spacer*5;
+
+    height:90vh;
+    width:100%;
+    max-width:400px;
+    box-sizing: border-box;
+
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height:90vh;
-    padding: $spacer*4;
-    padding-top: $spacer*5;
+
     @media(max-width:$breakpoint-1-width) {
       padding:$spacer*8 $spacer*4;
       padding-top:$spacer*9;
       height:auto;
-      width:auto;
-      .info {
-        align-items: center;
-      }
     }
+
     .info {
       display:flex;
       flex-direction:column;
+
       .title {
-        width:fit-content;
-        @media(max-width:$breakpoint-1-width) {
-          text-align: center;
-        }
+        @include serifBig();
       }
       .desc {
-        width:fit-content;
-        text-align: left;
-        @media(max-width:$breakpoint-1-width) {
-          text-align: center;
-        }
         margin-top: $spacer*2;
       }
+
+      @media(max-width:$breakpoint-1-width) {
+        align-items: center;
+        .title, desc {
+          text-align:center;
+        }
+      }
+
       .category-link {
-        width:fit-content;
         margin-bottom: $spacer*2;
+
         display:flex;
         align-items: center;
+
         text-decoration: none;
+
         .name {
           margin-top: $spacer;
           margin-left: $spacer;
-          text-transform: uppercase;
-          font-family: 'Josefin Sans', sans-serif;
-          font-weight: 300;
+          @include sansItalicUpper();
         }
+
         .arrow {
           stroke: $text-colour;
           transition: stroke 0.5s ease;
@@ -118,26 +123,29 @@ export default {
       }
     }
   }
+
   .images-ul {
     flex-basis:0;
     flex-grow:1;
-    margin:0;
+
     padding: $spacer $spacer*2;
-    list-style: none;
+
     display:flex;
     flex-direction: column;
     align-items: center;
+
     .image-li {
-      margin:0;
       padding:$spacer 0;
       &:first-child {
         padding-top:0;
       }
+
       .image {
         max-height:90vh;
         max-width:100%;
       }
     }
+    
     @media(min-width:$breakpoint-1-width) {
       padding-top: $spacer*3;
       .image-li:first-child {

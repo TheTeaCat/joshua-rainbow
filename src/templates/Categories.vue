@@ -69,6 +69,7 @@ export default {
 .main {
   display:flex;
   flex-direction:column;
+
   .topbar {
     padding: $spacer*4;
     padding-top: $spacer*5;
@@ -76,25 +77,30 @@ export default {
       padding:$spacer*8 $spacer*4;
       padding-top:$spacer*9;
     }
+
     .title {
       margin:0 auto;
       width:fit-content;
-      position:relative;
+      @include serifBig();
     }
+
     .back-link {
-      width: fit-content;
       margin: 0 auto;
       margin-bottom: $spacer*2;
+
+      width: fit-content;
+
+      text-decoration: none;
+
       display:flex;
       align-items: center;
-      text-decoration: none;
+
       .text {
         margin-top: $spacer;
         margin-left: $spacer;
-        text-transform: uppercase;
-        font-family: 'Josefin Sans', sans-serif;
-        font-weight: 300;
+        @include sansItalicUpper();
       }
+
       .arrow {
         stroke: $text-colour;
         transition: stroke 0.5s ease;
@@ -108,55 +114,58 @@ export default {
 
   }
   .series-list {
-    padding:0;
     padding-bottom:$spacer;
-    margin:0;
+
     .series-li {
       display: flex;
-      flex-direction: row;
       align-items: center;
+      flex-direction: row;
+      &:nth-child(even) {
+        flex-direction:row-reverse;
+      }
+
       padding: $spacer*3 $spacer*2;
       @media(max-width:$breakpoint-1-width) {
         padding: $spacer*2;
       }
-      margin:0;
+
       border-top: 1px dotted $text-colour;
-      &:nth-child(even) {
-        flex-direction:row-reverse;
-      }
+
       .image-link {
         flex-basis:50%;
         max-height:90vh;
         .cover-image {
           width:100%;
           max-height:90vh;
-          object-fit: contain;
         }
       }
+
       .info {
         flex-basis:50%;
-        padding: $spacer*2;
-        @media(max-width:$breakpoint-2-width) {
-          padding-bottom: $spacer*4;
-        }
-        box-sizing: border-box;
+
         display:flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        .title {
-          font-style: italic;
-          font-weight:700;
+
+        padding: $spacer*2;
+        @media(max-width:$breakpoint-2-width) {
+          padding-bottom: $spacer*4;
         }
+        
+        .title {
+          @include serifBoldItalic();
+        }
+
         .desc {
           margin-top: $spacer;
           max-width: 400px;
           text-align:center;
         }
       }
+      
       @media(max-width:$breakpoint-2-width) {
         flex-direction:column !important;
-        border-bottom: none;
         .info {
           margin-top: $spacer*4;
         }

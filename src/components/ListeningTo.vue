@@ -75,15 +75,19 @@ export default {
 .listening-to {
   padding-top:$spacer*2;
   border-top: 1px dotted $text-colour;
+
   display:flex;
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
+
   >*{
     margin-right: $spacer;
   }
+
   .headphones-icon {
     stroke: $text-colour;
+
     @keyframes flash {
       0% { fill:$highlight-colour }
       50% { fill:rgba(0,0,0,0) }
@@ -97,17 +101,20 @@ export default {
       }
     }
   }
+
   .track {
-    display:inline-block;
     margin-top:$spacer;
+
+    display:inline-block;
+
     text-align: center;
+
     .link {
-      font-family: 'Josefin Sans', sans-serif;
-      font-weight: 300;
-      font-style: italic;
+      @include sansItalic();
     }
   }
 }
+
 .loading-notice {
   min-height:22px;
 }

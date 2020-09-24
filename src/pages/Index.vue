@@ -91,62 +91,72 @@ export default {
 .main {
   height:0;
   flex-grow:1;
+
   display:flex;
   flex-direction: column;
+
   .featured-pages-ul {
     flex-grow: 1;
-    margin:0;padding:0;
+
     display:flex;
     flex-direction: column;
     align-items: center;
+
     .featured-pages-li {
-      flex-grow:1; width:100%;
-      margin:0;
+      flex-grow:1;
+
+      width:100%;
       padding: $spacer*3 $spacer*2 $spacer*2 $spacer*2;
       box-sizing: border-box;
+      
       display:flex;
       flex-direction: column;
       align-items: stretch;
+
       .image-cont {
         flex-basis:0;
         flex-grow:1;
+
         width:100%;
+
         position:relative;
+
         .featured-page-cover {
           position:absolute;
           top:50%; left:50%;
           transform:translate(-50%, -50%);
           max-width:100%;
           max-height:100%;
-          object-fit: contain;
         }
       }
+
       .bottom-bar {
         width:100%;
+
         display:flex;
         justify-content: space-between;
+
         padding-top: $spacer*8;
+
         .featured-page-link {
-          text-align: center;
           margin: 0 auto;
           margin-top: $spacer;
+
+          text-align: center;
           text-decoration: none;
-          text-transform: uppercase;
-          font-family: 'Josefin Sans', sans-serif;
-          font-weight: 300;
-          font-style: italic;
+          @include sansItalicUpper();
         }
+
         .next, .prev {
           display:flex;
           align-items: center;
+
           cursor: pointer;
+
           .link {
             margin: 0 $spacer;
             margin-top: $spacer;
-            text-transform: uppercase;
-            font-family: 'Josefin Sans', sans-serif;
-            font-weight: 300;
-            font-style: italic;
+            @include sansItalicUpper();
           }
           .arrow {
             stroke: $text-colour;

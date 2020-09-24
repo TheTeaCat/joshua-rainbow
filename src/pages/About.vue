@@ -63,21 +63,24 @@ export default {
   flex-grow:1;
   display:flex;
   align-items: center;
+
   .about-cont {
-    display:flex;
-    flex-direction:row;
-    justify-content: center;
-    align-items: center;
     width:100%;
     max-height:100%;
-    box-sizing: border-box;
+
+    padding: $spacer*4;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:row;    
     @media(max-width:$breakpoint-1-width) {
       flex-direction:column;
       .info-cont {
         margin-top: $spacer*4;
       }
     }
-    padding: $spacer*4;
+
     .cover-image-cont {
       width:fit-content;
       .cover-image {
@@ -85,51 +88,54 @@ export default {
         max-height:60vh;
       }
     }
+
     .info-cont {
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      max-width:500px;
+
       margin-left: $spacer*12;
       @media(max-width:$breakpoint-1-width){
         margin-left:0;
         margin-top: $spacer*8;
         width:100%;
       }
-      display:flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+
       .title {
         text-align: center;
+        @include serifBig();
       }
+
       .bio {
-        border-top: 1px dotted $text-colour;
-        border-bottom: 1px dotted $text-colour;
-        padding: $spacer*3 0;
         margin: $spacer*2 0;
         margin-bottom: $spacer*3;
+        padding: $spacer*3 0;
+
+        border-top: 1px dotted $text-colour;
+        border-bottom: 1px dotted $text-colour;
+
         text-align: center;
-        max-width:500px;
       }
+
       .social-links {
-        list-style:none;
-        margin: 0;
-        padding: 0;
         padding-bottom:$spacer*2;
+
         display:flex;
+        justify-content: center;
         align-items: center;
         flex-wrap:wrap;
-        justify-content: center;
+        
         .social-li {
           padding: 0 $spacer*2;
-          margin: 0;
           .social-link {
-            text-transform: uppercase;
-            font-family: 'Josefin Sans', sans-serif;
-            font-weight: 300;
-            font-style: italic;
+            @include sansItalicUpper();
           }
         }
       }
       .listening-to {
-        max-width:500px;
         width:100%;
       }
     }
