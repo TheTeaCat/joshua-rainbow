@@ -15,12 +15,12 @@
       A Favourite Song:
     </span>
     <span class="track" v-if="track!=null">
-      <g-link :to="'https://www.last.fm/music/'+artist.split(' ').join('+')"
+      <g-link :to="artist_link"
               class="link">
               {{ artist }}
       </g-link>
       <span class="sep">-</span>
-      <g-link :to="('https://www.last.fm/music/'+artist+'/'+album+'/'+track).split(' ').join('+')"
+      <g-link :to="track_link"
               class="link">
               {{ track }}
       </g-link>
@@ -48,6 +48,14 @@ export default {
       this.getMostRecentTrack();
     }.bind(this),
     this.refresh_rate)
+  },
+  computed: {
+    artist_link() {
+      return 'https://www.last.fm/music/'+this.artist.split(' ').join('+').split('/').join('%2F')
+    },
+    track_link() {
+      return ('https://www.last.fm/music/'+this.artist.split('/').join('%2F')+'/'+this.album.split('/').join('%2F')+'/'+this.track.split('/').join('%2F')).split(' ').join('+')
+    }
   },
   methods: {
     getMostRecentTrack() {
