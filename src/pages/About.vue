@@ -130,6 +130,7 @@ export default {
       }
       .listening-to {
         max-width:500px;
+        width:100%;
       }
     }
   }

@@ -23,6 +23,9 @@
       </g-link>
     </span>
   </div>
+  <div v-else-if="err==null" class="loading-notice">
+    Checking last.fm...
+  </div>
 </template>
 
 <script>
@@ -36,7 +39,7 @@ export default {
     err: null,
   }},
   mounted() {
-      this.getMostRecentTrack();
+    this.getMostRecentTrack();
     setInterval(function(){
       this.getMostRecentTrack();
     }.bind(this),
@@ -104,5 +107,8 @@ export default {
       font-style: italic;
     }
   }
+}
+.loading-notice {
+  min-height:22px;
 }
 </style>
