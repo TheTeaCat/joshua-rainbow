@@ -92,7 +92,7 @@ export default {
 
       @media(max-width:$breakpoint-1-width) {
         align-items: center;
-        .title, desc {
+        .title, .desc {
           text-align:center;
         }
       }
