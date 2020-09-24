@@ -16,14 +16,12 @@
     </span>
     <span class="track" v-if="track!=null">
       <g-link :to="artist_link"
-              class="link">
-              {{ artist }}
-      </g-link>
-      <span class="sep">-</span>
+              class="link"
+      >{{ artist }}</g-link>
+      <span class="sep"> - </span>
       <g-link :to="track_link"
-              class="link">
-              {{ track }}
-      </g-link>
+              class="link"
+      >{{ track }}</g-link>
     </span>
   </div>
   <div v-else-if="err==null" class="loading-notice">
