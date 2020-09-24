@@ -8,35 +8,34 @@
             v-show="displayed_tile==i || displayed_tile==null">
           
           <div class="image-cont">
-            <g-link :to="featured_page.link">
+            <g-link :to="featured_page.link" tabindex="-1">
               <g-image class="featured-page-cover" :src="featured_page.cover_image" />
             </g-link>
           </div>
-
-          <div class="bottom-bar">
-            <div class="prev" @click="prev" v-if="displayed_tile != null">
-              <svg xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" class="arrow">
-                <line x1="0%" y1="50%" x2="100%" y2="50%"/>
-                <line x1="0%" y1="50%" x2="50%" y2="100%"/>
-                <line x1="0%" y1="50%" x2="50%" y2="0%"/>
-              </svg>
-              <span class="link">Prev</span>
-            </div>
-
-            <g-link :to="featured_page.link" class="featured-page-link link">
-              {{ featured_page.title }}
-            </g-link>
-
-            <div class="next" @click="next" v-if="displayed_tile != null">
-              <span class="link">Next</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" class="arrow">
-                <line x1="0%" y1="50%" x2="100%" y2="50%"/>
-                <line x1="100%" y1="50%" x2="50%" y2="100%"/>
-                <line x1="100%" y1="50%" x2="50%" y2="0%"/>
-              </svg>
-            </div>           
-          </div>
         </li>
+        <div class="bottom-bar">
+          <button class="prev" @click="prev" v-if="displayed_tile != null">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" class="arrow">
+              <line x1="0%" y1="50%" x2="100%" y2="50%"/>
+              <line x1="0%" y1="50%" x2="50%" y2="100%"/>
+              <line x1="0%" y1="50%" x2="50%" y2="0%"/>
+            </svg>
+            <span class="link">Prev</span>
+          </button>
+
+          <g-link :to="$page.allFrontPage.edges[0].node.featured_pages[displayed_tile].link" class="featured-page-link link">
+            {{ $page.allFrontPage.edges[0].node.featured_pages[displayed_tile].title }}
+          </g-link>
+
+          <button class="next" @click="next" v-if="displayed_tile != null">
+            <span class="link">Next</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" class="arrow">
+              <line x1="0%" y1="50%" x2="100%" y2="50%"/>
+              <line x1="100%" y1="50%" x2="50%" y2="100%"/>
+              <line x1="100%" y1="50%" x2="50%" y2="0%"/>
+            </svg>
+          </button>           
+        </div>
       </ul>
     </main>
   </Layout>
@@ -106,7 +105,7 @@ export default {
       flex-grow:1;
 
       width:100%;
-      padding: $spacer*3 $spacer*2 $spacer*2 $spacer*2;
+      padding: $spacer*3 $spacer*2 0 $spacer*2;
       box-sizing: border-box;
       
       display:flex;
@@ -129,44 +128,51 @@ export default {
           max-height:100%;
         }
       }
+    }
+  }
 
-      .bottom-bar {
-        width:100%;
+  .bottom-bar {
+    width:100%;
 
-        display:flex;
-        justify-content: space-between;
+    display:flex;
+    justify-content: space-between;
 
-        padding-top: $spacer*8;
+    padding: $spacer*8 $spacer*2 $spacer*2 $spacer*2;
+    box-sizing: border-box;
 
-        .featured-page-link {
-          margin: 0 auto;
-          margin-top: $spacer;
+    .featured-page-link {
+      margin: 0 auto;
+      margin-top: $spacer;
 
-          text-align: center;
-          text-decoration: none;
-          @include sansItalicUpper();
-        }
+      text-align: center;
+      text-decoration: none;
+      @include sansItalicUpper();
+    }
 
-        .next, .prev {
-          display:flex;
-          align-items: center;
+    .next, .prev {
+      display:flex;
+      align-items: center;
 
-          cursor: pointer;
+      background: none;
+      border: none;
+      font-size: $font-size;
+      padding:0;
+      margin:0;
 
-          .link {
-            margin: 0 $spacer;
-            margin-top: $spacer;
-            @include sansItalicUpper();
-          }
-          .arrow {
-            stroke: $text-colour;
-            transition: stroke 0.5s ease;
-          }
-          &:hover {
-            .arrow {
-              stroke: $highlight-colour;
-            }
-          }
+      cursor: pointer;
+
+      .link {
+        margin: 0 $spacer;
+        margin-top: $spacer;
+        @include sansItalicUpper();
+      }
+      .arrow {
+        stroke: $text-colour;
+        transition: stroke 0.5s ease;
+      }
+      &:hover {
+        .arrow {
+          stroke: $highlight-colour;
         }
       }
     }

@@ -3,7 +3,7 @@
     <main class="main">
       <ol class="programming-ol">
         <li v-for="edge of $page.allProgramming.edges" :key="edge.node.id" class="programming-li">
-          <g-link class="cover-image-cont" :to="edge.node.link"><g-image class="cover-image" :src="edge.node.cover_image"/></g-link>
+          <g-link class="cover-image-cont" :to="edge.node.link" tabindex="-1"><g-image class="cover-image" :src="edge.node.cover_image"/></g-link>
           <div class="info">
             <h2 class="title"><g-link class="link" :to="edge.node.link">{{ edge.node.title }}</g-link></h2>
             <div class="date">{{ edge.node.date }}</div>
