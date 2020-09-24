@@ -24,40 +24,19 @@
       >{{ track }}</g-link>
     </span>
   </div>
-  <div v-else-if="err==null" class="loading-notice">
-    Checking last.fm...
-  </div>
 </template>
 
 <script>
 export default {
   props: ['user','api_key',"refresh_rate"],
   data() {return {
-    track: null,
-    album:null,
-    artist: null,
+    track: "Ominous Cloud",
+    album: "Haha Sound",
+    artist: "Broadcast",
     nowplaying: null,
-    err: null,
+    err: "nojs",
     fave_track_i: 0,
-  }},
-  mounted() {
-    this.getMostRecentTrack();
-    setInterval(function(){
-      this.getMostRecentTrack();
-    }.bind(this),
-    this.refresh_rate)
-  },
-  computed: {
-    artist_link() {
-      return 'https://www.last.fm/music/'+this.artist.split(' ').join('+').split('/').join('%2F')
-    },
-    track_link() {
-      return ('https://www.last.fm/music/'+this.artist.split('/').join('%2F')+'/'+this.album.split('/').join('%2F')+'/'+this.track.split('/').join('%2F')).split(' ').join('+')
-    }
-  },
-  methods: {
-    getMostRecentTrack() {
-      const fave_tracks = [
+    fave_tracks: [
         {
           artist: 'Broadcast',
           album:'Haha Sound',
@@ -83,7 +62,25 @@ export default {
           album:'(II)',
           track:'Not In Love - Radio Version',
         },
-      ]
+      ],
+  }},
+  mounted() {
+    this.getMostRecentTrack();
+    setInterval(function(){
+      this.getMostRecentTrack();
+    }.bind(this),
+    this.refresh_rate)
+  },
+  computed: {
+    artist_link() {
+      return 'https://www.last.fm/music/'+this.artist.split(' ').join('+').split('/').join('%2F')
+    },
+    track_link() {
+      return ('https://www.last.fm/music/'+this.artist.split('/').join('%2F')+'/'+this.album.split('/').join('%2F')+'/'+this.track.split('/').join('%2F')).split(' ').join('+')
+    }
+  },
+  methods: {
+    getMostRecentTrack() {
       this.axios.get(
         'https://ws.audioscrobbler.com/2.0/?format=json',
         { 
@@ -98,13 +95,14 @@ export default {
           this.album = response.data.recenttracks.track[0].album['#text']
           this.track = response.data.recenttracks.track[0].name
           this.nowplaying = response.data.recenttracks.track[0]['@attr'] ? response.data.recenttracks.track[0]['@attr'].nowplaying : false
+          this.err = null
         }.bind(this)
         ).catch(function(err) {
           console.log("Listening-to widged went wrong :(\n", err)
           this.err = err
-          this.artist = fave_tracks[this.fave_track_i].artist
-          this.album = fave_tracks[this.fave_track_i].album
-          this.track = fave_tracks[this.fave_track_i].track
+          this.artist = this.fave_tracks[this.fave_track_i].artist
+          this.album = this.fave_tracks[this.fave_track_i].album
+          this.track = this.fave_tracks[this.fave_track_i].track
           this.nowplaying = false
           this.fave_track_i = (this.fave_track_i+1)%fave_tracks.length
         }.bind(this))
