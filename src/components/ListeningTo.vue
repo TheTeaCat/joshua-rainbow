@@ -1,5 +1,5 @@
 <template>
-  <div class="listening-to" v-if="err==null && track!=null">
+  <div class="listening-to" v-if="err!=null || track!=null">
     <svg xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" :class="{ 'headphones-icon':true, 'live':nowplaying }">
       <line x1="16.6%" y1="83.3%" x2="16.6%" y2="40%" stroke-width="2px"/>
       <line x1="16.6%" y1="40%" x2="16.6%" y2="16.6%"/>
@@ -8,10 +8,13 @@
       <line x1="83.3%" y1="40%" x2="83.3%" y2="83.3%" stroke-width="2px"/>
       <circle id="circle" cx="50%" cy="61.65%" r="15%" stroke="rgba(0,0,0,0)" fill="rgba(0,0,0,0)"/>
     </svg>
-    <span class="title">
+    <span class="title" v-if="err==null">
       {{ nowplaying ? 'Currently Listening To:' : 'Last Listened To:'}} 
     </span>
-    <span class="track">
+    <span class="title" v-else>
+      A Favourite Song:
+    </span>
+    <span class="track" v-if="track!=null">
       <g-link :to="'https://www.last.fm/music/'+artist.split(' ').join('+')"
               class="link">
               {{ artist }}
@@ -37,6 +40,7 @@ export default {
     artist: null,
     nowplaying: null,
     err: null,
+    fave_track_i: 0,
   }},
   mounted() {
     this.getMostRecentTrack();
@@ -47,6 +51,33 @@ export default {
   },
   methods: {
     getMostRecentTrack() {
+      const fave_tracks = [
+        {
+          artist: 'Broadcast',
+          album:'Haha Sound',
+          track:'Ominous Cloud',
+        },
+        {
+          artist: 'Tennis',
+          album:'Young & Old',
+          track:'My Better Self',
+        },
+        {
+          artist: 'Cults',
+          album:'Cults',
+          track:'Oh My God',
+        },
+        {
+          artist: 'Wild Nothing',
+          album:'Gemini',
+          track:'Live in Dreams',
+        },
+        {
+          artist: 'Crystal Castles',
+          album:'(II)',
+          track:'Not In Love - Radio Version',
+        },
+      ]
       this.axios.get(
         'https://ws.audioscrobbler.com/2.0/?format=json',
         { 
@@ -65,6 +96,11 @@ export default {
         ).catch(function(err) {
           console.log("Listening-to widged went wrong :(\n", err)
           this.err = err
+          this.artist = fave_tracks[this.fave_track_i].artist
+          this.album = fave_tracks[this.fave_track_i].album
+          this.track = fave_tracks[this.fave_track_i].track
+          this.nowplaying = false
+          this.fave_track_i = (this.fave_track_i+1)%fave_tracks.length
         }.bind(this))
     }
   }
