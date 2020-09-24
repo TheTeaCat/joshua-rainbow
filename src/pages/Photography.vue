@@ -64,7 +64,7 @@ export default {
         line-height: $font-size-l;
         margin-top: $spacer;
         &:first-child {
-          margin-top:0;
+          margin-top:$spacer/2;
         }
         .category-link {
           text-transform: uppercase;
@@ -80,7 +80,7 @@ export default {
       .title {
         align-self:center;
         margin-right:0;
-        margin-bottom: $spacer*3;
+        margin-bottom: $spacer*2.5;
         .colon {
           display:none;
         }
