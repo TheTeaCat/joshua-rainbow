@@ -45,13 +45,15 @@ $breakpoint-2-width:768px;
 }
 
 /* serif font styles */
-@mixin serifBoldItalic() {
+@mixin serifBold() {
     font-family: 'Lora', serif;
     font-weight:700;
+}
+@mixin serifBoldItalic() {
+    @include serifBold();
     font-style: italic;
 }
 @mixin serifBig() {
-    font-family: 'Lora', serif;
+    @include serifBold();
     font-size: $font-size-l;
-    font-weight:700;
 }
