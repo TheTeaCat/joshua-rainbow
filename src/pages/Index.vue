@@ -86,6 +86,9 @@ export default {
   mounted() {
     this.displayed_tile = 0;
     this.resetInterval()
+  },
+  destroyed() {
+    clearInterval(this.gallery_interval)
   }
 }
 </script>
