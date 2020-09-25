@@ -12,28 +12,30 @@
             </g-link>
           </div>
         </li>
-        <div class="bottom-bar">
-          <button class="prev" @click="prev" v-if="gallery_interval != null">
-            <svg xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" class="arrow">
-              <line x1="0%" y1="50%" x2="100%" y2="50%"/>
-              <line x1="0%" y1="50%" x2="50%" y2="100%"/>
-              <line x1="0%" y1="50%" x2="50%" y2="0%"/>
-            </svg>
-            <span class="link">Prev</span>
-          </button>
-          <g-link :to="$page.allFrontPage.edges[0].node.featured_pages[displayed_tile].link" class="featured-page-link link">
-            {{ $page.allFrontPage.edges[0].node.featured_pages[displayed_tile].title }}
-          </g-link>
-          <button class="next" @click="next" v-if="gallery_interval != null">
-            <span class="link">Next</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" class="arrow">
-              <line x1="0%" y1="50%" x2="100%" y2="50%"/>
-              <line x1="100%" y1="50%" x2="50%" y2="100%"/>
-              <line x1="100%" y1="50%" x2="50%" y2="0%"/>
-            </svg>
-          </button>           
-        </div>
       </ul>
+      <div class="bottom-bar">
+        <button class="prev" @click="prev" v-if="gallery_interval != null">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" class="arrow">
+            <line x1="0%" y1="50%" x2="100%" y2="50%"/>
+            <line x1="0%" y1="50%" x2="50%" y2="100%"/>
+            <line x1="0%" y1="50%" x2="50%" y2="0%"/>
+          </svg>
+          <span class="link">Prev</span>
+        </button>
+        <g-link :to="$page.allFrontPage.edges[0].node.featured_pages[displayed_tile].link" class="featured-page-link link">
+          {{ $page.allFrontPage.edges[0].node.featured_pages[displayed_tile].title }}
+        </g-link>
+        <button class="next" @click="next" v-if="gallery_interval != null">
+          <span class="link">Next</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" class="arrow">
+            <line x1="0%" y1="50%" x2="100%" y2="50%"/>
+            <line x1="100%" y1="50%" x2="50%" y2="100%"/>
+            <line x1="100%" y1="50%" x2="50%" y2="0%"/>
+          </svg>
+        </button>           
+          </button>           
+        </button>           
+      </div>
     </main>
   </Layout>
 </template>
