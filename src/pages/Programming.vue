@@ -95,7 +95,7 @@ export default {
 
         .title {
           padding-bottom: $spacer*2;
-          @include serifBold();
+          @include serifBoldItalic();
         }
 
         .date {

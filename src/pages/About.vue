@@ -106,7 +106,7 @@ export default {
 
       .title {
         text-align: center;
-        @include serifBig();
+        @include serifBoldItalicLarge();
       }
 
       .bio {

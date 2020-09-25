@@ -12,7 +12,6 @@ $breakpoint-1-width:1080px;
 $breakpoint-2-width:768px;
 
 $font-size: 16px;
-$font-size-m: $font-size*1.2;
 $font-size-l: $font-size*1.5;
 
 /* sans-serif font styles */
@@ -29,10 +28,6 @@ $font-size-l: $font-size*1.5;
     @include sansItalicUpper();
     font-weight:400;
 }
-@mixin sansItalicUpperMedium() {
-    @include sansItalicUpper();
-    font-size:$font-size-m;    
-}
 @mixin sansItalicUpperLarge() {
     @include sansItalicUpper();
     font-size:$font-size-l;    
@@ -43,15 +38,12 @@ $font-size-l: $font-size*1.5;
 }
 
 /* serif font styles */
-@mixin serifBold() {
+@mixin serifBoldItalic() {
     font-family: 'Lora', serif;
     font-weight:700;
-}
-@mixin serifBoldItalic() {
-    @include serifBold();
     font-style: italic;
 }
-@mixin serifBig() {
-    @include serifBold();
+@mixin serifBoldItalicLarge() {
+    @include serifBoldItalic();
     font-size: $font-size-l;
 }

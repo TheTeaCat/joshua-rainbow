@@ -54,7 +54,7 @@ export default {
     .title {
       margin-right: $spacer*4;
       line-height: $font-size-l;
-      @include serifBig();
+      @include serifBoldItalicLarge();
     }
 
     .categories-list {
@@ -66,13 +66,13 @@ export default {
       .category-li {
         line-height: $font-size-l;
 
-        margin-top: $spacer;
+        margin-top: $spacer*2;
         &:first-child {
-          margin-top:$spacer/2;
+          margin-top:$spacer;
         }
 
         .category-link {
-          @include sansItalicUpperMedium();
+          @include sansItalicUpperLarge();
        }
       }
     }

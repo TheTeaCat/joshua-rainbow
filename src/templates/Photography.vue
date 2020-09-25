@@ -84,7 +84,7 @@ export default {
       flex-direction:column;
 
       .title {
-        @include serifBig();
+        @include serifBoldItalicLarge();
       }
       .desc {
         margin-top: $spacer*2;

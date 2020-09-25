@@ -79,7 +79,7 @@ export default {
     .title {
       margin:0 auto;
       width:fit-content;
-      @include serifBig();
+      @include serifBoldItalicLarge();
     }
 
     .back-link {
