@@ -15,7 +15,6 @@
   </Layout>
 </template>
 
-
 <page-query>
 query {
   allCategories(sortBy:"title", order: DESC) {

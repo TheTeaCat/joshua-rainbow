@@ -1,5 +1,5 @@
 <template>
-  <div class="listening-to" v-if="err!=null || track!=null">
+  <div class="listening-to">
     <svg xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" :class="{ 'headphones-icon':true, 'live':nowplaying }">
       <line x1="16.6%" y1="83.3%" x2="16.6%" y2="40%" stroke-width="2px"/>
       <line x1="16.6%" y1="40%" x2="16.6%" y2="16.6%"/>
@@ -8,17 +8,21 @@
       <line x1="83.3%" y1="40%" x2="83.3%" y2="83.3%" stroke-width="2px"/>
       <circle id="circle" cx="50%" cy="61.65%" r="15%" stroke="rgba(0,0,0,0)" fill="rgba(0,0,0,0)"/>
     </svg>
+
     <span class="title" v-if="err==null">
       {{ nowplaying ? 'Currently Listening To:' : 'Last Listened To:'}} 
     </span>
     <span class="title" v-else>
       A Favourite Song:
     </span>
+
     <span class="track" v-if="track!=null">
       <g-link :to="artist_link"
               class="link"
       >{{ artist }}</g-link>
+
       <span class="sep"> - </span>
+
       <g-link :to="track_link"
               class="link"
       >{{ track }}</g-link>
@@ -150,9 +154,5 @@ export default {
       @include sansItalic();
     }
   }
-}
-
-.loading-notice {
-  min-height:22px;
 }
 </style>

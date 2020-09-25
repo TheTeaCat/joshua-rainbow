@@ -18,11 +18,9 @@
         <li v-for="series of $page.categories.belongsTo.edges" 
             :key="series.node.id" 
             class="series-li">
-
           <g-link :to="series.node.path" class="image-link" tabindex="-1">
             <g-image class="cover-image" :alt="series.node.title" :src="series.node.cover_image" immediate="true"/>
           </g-link>
-
           <div class="info">
             <g-link class="title link" :to="series.node.path">{{ series.node.title }}</g-link>
             <div class="dotted-line"/>

@@ -6,7 +6,6 @@
             :key="featured_page.title"
             class="featured-pages-li"
             v-show="displayed_tile==i || displayed_tile==null">
-          
           <div class="image-cont">
             <g-link :to="featured_page.link" tabindex="-1">
               <g-image class="featured-page-cover" :src="featured_page.cover_image" />
@@ -22,11 +21,9 @@
             </svg>
             <span class="link">Prev</span>
           </button>
-
           <g-link :to="$page.allFrontPage.edges[0].node.featured_pages[displayed_tile].link" class="featured-page-link link">
             {{ $page.allFrontPage.edges[0].node.featured_pages[displayed_tile].title }}
           </g-link>
-
           <button class="next" @click="next" v-if="gallery_interval != null">
             <span class="link">Next</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" class="arrow">
