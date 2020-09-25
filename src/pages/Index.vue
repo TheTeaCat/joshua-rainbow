@@ -65,20 +65,27 @@ export default {
   }},
   methods:{
     next() {
-      this.displayed_tile = (this.displayed_tile+1)%this.$page.allFrontPage.edges[0].node.featured_pages.length
-      clearInterval(this.gallery_interval)
+      const pages = this.$page.allFrontPage.edges[0].node.featured_pages.length
+      this.displayed_tile = (this.displayed_tile+1)%pages
+      this.resetInterval()
     },
     prev() {
       const pages = this.$page.allFrontPage.edges[0].node.featured_pages.length
       this.displayed_tile = (this.displayed_tile-1+pages)%pages
-      clearInterval(this.gallery_interval)
+      this.resetInterval()
+    },
+    resetInterval() {
+      if (this.gallery_interval) {
+        clearInterval(this.gallery_interval)
+      }
+      this.gallery_interval = setInterval(function(){
+        this.displayed_tile = (this.displayed_tile+1)%this.$page.allFrontPage.edges[0].node.featured_pages.length
+      }.bind(this),10000)
     }
   },
   mounted() {
     this.displayed_tile = 0;
-    this.gallery_interval = setInterval(function(){
-      this.displayed_tile = (this.displayed_tile+1)%this.$page.allFrontPage.edges[0].node.featured_pages.length
-    }.bind(this),10000)
+    this.resetInterval()
   }
 }
 </script>
