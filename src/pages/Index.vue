@@ -8,7 +8,7 @@
             v-show="displayed_tile==i || displayed_tile==null">
           <div class="image-cont">
             <g-link :to="featured_page.link" tabindex="-1">
-              <g-image class="featured-page-cover" :src="featured_page.cover_image" />
+              <g-image class="featured-page-cover" :src="featured_page.cover_image" :alt="featured_page.title"/>
             </g-link>
           </div>
         </li>
@@ -32,8 +32,6 @@
             <line x1="100%" y1="50%" x2="50%" y2="100%"/>
             <line x1="100%" y1="50%" x2="50%" y2="0%"/>
           </svg>
-        </button>           
-          </button>           
         </button>           
       </div>
     </main>
