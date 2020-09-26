@@ -34,13 +34,13 @@ $font-size-l: $font-size*1.5;
 }
 @mixin sansItalicUpperLargeBold() { 
     @include sansItalicUpperLarge();
-    font-weight:400;
+    font-weight: 400;
 }
 
 /* serif font styles */
 @mixin serifBoldItalic() {
     font-family: 'Lora', serif;
-    font-weight:700;
+    font-weight: 700;
     font-style: italic;
 }
 @mixin serifBoldItalicLarge() {
