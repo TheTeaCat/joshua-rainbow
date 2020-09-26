@@ -23,7 +23,6 @@
           </g-link>
           <div class="info">
             <g-link class="title link" :to="series.node.path">{{ series.node.title }}</g-link>
-            <div class="dotted-line"/>
             <p class="desc">
               {{ series.node.description }}
             </p>
