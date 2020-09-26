@@ -20,18 +20,13 @@ $font-size-l: $font-size*1.5;
     font-weight: 300;
     font-style: italic;
 }
-@mixin sansItalicUpper() {
+@mixin sansItalicLarge() {
     @include sansItalic();
-    text-transform: uppercase;
-}
-@mixin sansItalicUpperLarge() {
-    @include sansItalicUpper();
     font-size:$font-size-l;    
 }
 
 /* serif font styles */
 @mixin serifBoldItalic() {
-    font-family: 'Lora', serif;
     font-weight: 700;
     font-style: italic;
 }

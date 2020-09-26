@@ -72,7 +72,7 @@ export default {
         }
 
         .category-link {
-          @include sansItalicUpperLarge();
+          @include sansItalicLarge();
        }
       }
     }

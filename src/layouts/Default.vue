@@ -77,7 +77,7 @@ export default {
           display:inline-block;
           
           .header-link {
-            @include sansItalicUpper();
+            @include sansItalic();
           }
         }
       }
@@ -96,7 +96,7 @@ export default {
 
         display:inline-flex;
 
-        @include sansItalicUpper();
+        @include sansItalic();
 
         .link {
           margin-top:$spacer/2;
@@ -143,7 +143,7 @@ export default {
           .header-link-li {
             padding: $spacer 0;
             .header-link {
-              @include sansItalicUpperLarge();
+              @include sansItalicLarge();
             }
           }
         }

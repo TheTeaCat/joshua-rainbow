@@ -153,7 +153,7 @@ export default {
 
       text-align: center;
       text-decoration: none;
-      @include sansItalicUpper();
+      @include sansItalic();
     }
 
     .next, .prev {
@@ -171,7 +171,7 @@ export default {
       .link {
         margin: 0 $spacer;
         margin-top: $spacer;
-        @include sansItalicUpper();
+        @include sansItalic();
       }
       .arrow {
         stroke: $text-colour;

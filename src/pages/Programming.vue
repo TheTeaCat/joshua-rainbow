@@ -102,7 +102,7 @@ export default {
 
         .date {
           padding-bottom: $spacer;
-          @include sansItalicUpper();
+          @include sansItalic();
         }
 
         .description {

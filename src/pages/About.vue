@@ -131,7 +131,7 @@ export default {
         .social-li {
           padding: 0 $spacer*2;
           .social-link {
-            @include sansItalicUpper();
+            @include sansItalic();
           }
         }
       }

@@ -108,7 +108,7 @@ export default {
         .name {
           margin-top: $spacer;
           margin-left: $spacer;
-          @include sansItalicUpper();
+          @include sansItalic();
         }
 
         .arrow {

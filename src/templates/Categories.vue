@@ -96,7 +96,7 @@ export default {
       .text {
         margin-top: $spacer;
         margin-left: $spacer;
-        @include sansItalicUpper();
+        @include sansItalic();
       }
 
       .arrow {

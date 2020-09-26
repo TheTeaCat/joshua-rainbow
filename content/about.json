@@ -4,23 +4,23 @@
   "social_links": [
     {
       "link": "mailto:joshua.r.osullivan@gmail.com",
-      "platform": "email"
+      "platform": "Email"
     },
     {
       "link": "https://github.com/TheTeaCat",
-      "platform": "github"
+      "platform": "Github"
     },
     {
       "link": "https://www.linkedin.com/in/joshua-o-sullivan/",
-      "platform": "linkedin"
+      "platform": "LinkedIn"
     },
     {
       "link": "https://www.instagram.com/the.tea.cat/",
-      "platform": "instagram"
+      "platform": "Instagram"
     },
     {
       "link": "https://www.last.fm/user/TheTeaCat",
-      "platform": "lastfm"
+      "platform": "Last.fm"
     }
   ],
   "cover_image": "/media/2020/09/20/me.jpg"
