@@ -112,8 +112,6 @@ export default {
 
   }
   .series-list {
-    padding-bottom:$spacer;
-
     .series-li {
       display: flex;
       align-items: center;
@@ -133,6 +131,7 @@ export default {
         flex-basis:50%;
         max-height:90vh;
         .cover-image {
+          display:block;
           width:100%;
           max-height:90vh;
         }
