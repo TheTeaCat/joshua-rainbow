@@ -78,9 +78,6 @@ export default {
           
           .header-link {
             @include sansItalicUpper();
-            &.active--exact {
-              @include sansItalicUpperBold();
-            }
           }
         }
       }
@@ -99,7 +96,7 @@ export default {
 
         display:inline-flex;
 
-        @include sansItalicUpperBold();
+        @include sansItalicUpper();
 
         .link {
           margin-top:$spacer/2;
@@ -147,9 +144,6 @@ export default {
             padding: $spacer 0;
             .header-link {
               @include sansItalicUpperLarge();
-              &.active--exact {
-                @include sansItalicUpperLargeBold();
-              }
             }
           }
         }

@@ -41,11 +41,9 @@ body {
         }
     }
     &.active--exact {
-        &:hover {
-            color: inherit;
-        }
+        color: $highlight-colour;
         &::after {
-            width:0;
+            width:100%;
         }
     }
 }
