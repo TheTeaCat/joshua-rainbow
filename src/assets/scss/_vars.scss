@@ -28,10 +28,6 @@ $font-size-l: $font-size*1.5;
     @include sansItalicUpper();
     font-size:$font-size-l;    
 }
-@mixin sansItalicUpperLargeBold() { 
-    @include sansItalicUpperLarge();
-    font-weight: 400;
-}
 
 /* serif font styles */
 @mixin serifBoldItalic() {
