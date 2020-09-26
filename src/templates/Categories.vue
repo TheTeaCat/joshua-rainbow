@@ -5,8 +5,8 @@
         <g-link to="/photography" class="back-link">
           <svg xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" class="arrow">
             <line x1="5%" y1="50%" x2="95%" y2="50%"/>
-            <line x1="5%" y1="48%" x2="50%" y2="95%"/>
-            <line x1="5%" y1="52%" x2="50%" y2="5%"/>
+            <line x1="5%" y1="49.5%" x2="50%" y2="95%"/>
+            <line x1="5%" y1="50.5%" x2="50%" y2="5%"/>
           </svg>
           <span class="text link">Categories</span>
         </g-link>
@@ -100,6 +100,7 @@ export default {
 
       .arrow {
         stroke: $text-colour;
+        stroke-width: 0.5px;
         transition: stroke 0.5s ease;
       }
       &:hover {

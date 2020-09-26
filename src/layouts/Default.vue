@@ -104,6 +104,7 @@ export default {
 
         .hamburger-icon, .cross-icon {
           stroke: $text-colour;
+          stroke-width: 0.5px;
           transition: stroke 0.5s ease;
           margin-left: $spacer*2;
         }

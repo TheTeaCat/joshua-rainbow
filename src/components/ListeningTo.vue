@@ -128,6 +128,7 @@ export default {
 
   .headphones-icon {
     stroke: $text-colour;
+    stroke-width:0.5px;
 
     @keyframes flash {
       0% { fill:$highlight-colour }
