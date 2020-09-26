@@ -3,13 +3,8 @@
 
 html {
     height:100vh;
-
-    font-family: 'Lora', serif;
-    font-size:$font-size;
-    text-size-adjust:none;
-
     background: $bg;
-    color: $text-colour
+    @include defaultFont();
 }
 
 body {
