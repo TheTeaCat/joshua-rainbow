@@ -132,7 +132,8 @@ export default {
         max-height:90vh;
         .cover-image {
           display:block;
-          width:100%;
+          max-width:100%;
+          margin: 0 auto;
           max-height:90vh;
         }
       }
