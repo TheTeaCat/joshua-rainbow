@@ -30,6 +30,7 @@ $font-size-l: $font-size*1.5;
 }
 @mixin sansItalicLarge() {
     @include sansItalic();
+    font-weight: 200;
     font-size:$font-size-l;    
 }
 
