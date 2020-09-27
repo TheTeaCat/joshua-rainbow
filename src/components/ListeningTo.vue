@@ -2,9 +2,9 @@
   <div class="listening-to">
     <svg xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" :class="{ 'headphones-icon':true, 'live':nowplaying }">
       <line x1="16.6%" y1="83.3%" x2="16.6%" y2="40%" stroke-width="2px"/>
-      <line x1="16.6%" y1="40%" x2="16.6%" y2="16.6%"/>
-      <line x1="16.6%" y1="16.6%" x2="83.3%" y2="16.6%"/>
-      <line x1="83.3%" y1="16.6%" x2="83.3%" y2="40%"/>
+      <line x1="16.6%" y1="40%" x2="16.6%" y2="16.6%" stroke-width="0.5px"/>
+      <line x1="16.6%" y1="16.6%" x2="83.3%" y2="16.6%" stroke-width="0.5px"/>
+      <line x1="83.3%" y1="16.6%" x2="83.3%" y2="40%" stroke-width="0.5px"/>
       <line x1="83.3%" y1="40%" x2="83.3%" y2="83.3%" stroke-width="2px"/>
       <circle id="circle" cx="50%" cy="61.65%" r="15%" stroke="rgba(0,0,0,0)" fill="rgba(0,0,0,0)"/>
     </svg>
@@ -128,7 +128,6 @@ export default {
 
   .headphones-icon {
     stroke: $text-colour;
-    stroke-width:0.5px;
 
     @keyframes flash {
       0% { fill:$highlight-colour }

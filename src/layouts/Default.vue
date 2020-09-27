@@ -4,13 +4,13 @@
       <div class="hamburger-button" @click="toggleNav">
         <span class="link">{{ $static.metadata.siteName }}</span>
         <svg xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" class="hamburger-icon">
-          <line x1="0%" y1="16.6%" x2="100%" y2="16.6%"/>
-          <line x1="0%" y1="50%" x2="100%" y2="50%"/>
-          <line x1="0%" y1="83.3%" x2="100%" y2="83.3%"/>
+          <line x1="0%" y1="16.6%" x2="100%" y2="16.6%" stroke-width="0.5px"/>
+          <line x1="0%" y1="50%" x2="100%" y2="50%" stroke-width="0.5px"/>
+          <line x1="0%" y1="83.3%" x2="100%" y2="83.3%" stroke-width="0.5px"/>
         </svg>
         <svg xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" class="cross-icon">
-          <line x1="0%" y1="0%" x2="100%" y2="100%"/>
-          <line x1="0%" y1="100%" x2="100%" y2="0%"/>
+          <line x1="0%" y1="0%" x2="100%" y2="100%" stroke-width="0.5px"/>
+          <line x1="0%" y1="100%" x2="100%" y2="0%" stroke-width="0.5px"/>
         </svg>
       </div>
       <nav class="header-nav">
@@ -104,7 +104,6 @@ export default {
 
         .hamburger-icon, .cross-icon {
           stroke: $text-colour;
-          stroke-width: 0.5px;
           transition: stroke 0.5s ease;
           margin-left: $spacer*2;
         }

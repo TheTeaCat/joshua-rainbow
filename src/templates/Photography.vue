@@ -5,9 +5,9 @@
         <div class="info">
           <g-link :to="$page.photography.category.path" class="category-link">
             <svg xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" class="arrow">
-              <line x1="5%" y1="50%" x2="95%" y2="50%"/>
-              <line x1="5%" y1="49.5%" x2="50%" y2="95%"/>
-              <line x1="5%" y1="50.5%" x2="50%" y2="5%"/>
+              <line x1="5%" y1="50%" x2="95%" y2="50%" stroke-width="0.5px"/>
+              <line x1="5%" y1="49.5%" x2="50%" y2="95%" stroke-width="0.5px"/>
+              <line x1="5%" y1="50.5%" x2="50%" y2="5%" stroke-width="0.5px"/>
             </svg>
             <span class="name link">{{ $page.photography.category.title }}</span>
           </g-link>
@@ -113,7 +113,6 @@ export default {
 
         .arrow {
           stroke: $text-colour;
-          stroke-width: 0.5px;
           transition: stroke 0.5s ease;
         }
         &:hover {
