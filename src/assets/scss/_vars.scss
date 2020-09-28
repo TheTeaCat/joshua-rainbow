@@ -11,31 +11,34 @@ $max-width:1280px;
 $breakpoint-1-width:1080px;
 $breakpoint-2-width:768px;
 
-$font-size: 16px;
-$font-size-l: $font-size*1.5;
+$font-size: 15px;
+$font-size-m: 16px;
+$font-size-l: 24px;
 
 /* default font style */
 @mixin defaultFont() {
     font-family: 'Lora', serif;
     font-size:$font-size;
     text-size-adjust:none;
-    color: $text-colour
+    color: $text-colour;
 }
 
 /* sans-serif font styles */
 @mixin sansItalic() {
     font-family: 'Josefin Sans', sans-serif;
+    font-size:$font-size-m;
     font-weight: 300;
     font-style: italic;
 }
 @mixin sansItalicLarge() {
     @include sansItalic();
+    font-size:$font-size-l;
     font-weight: 200;
-    font-size:$font-size-l;    
 }
 
 /* serif font styles */
 @mixin serifBoldItalic() {
+    font-size:$font-size-m;
     font-weight: 700;
     font-style: italic;
 }
