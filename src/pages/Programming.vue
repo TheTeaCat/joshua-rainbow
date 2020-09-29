@@ -52,7 +52,7 @@ export default {
   metaInfo() {
     return {
       ...this.$ogp({
-        title: 'Programming Projects',
+        title: this.$static.metaData.siteName + ' - Programming Projects',
         description: 'Programming Projects of Joshua Rainbow O\'Sullivan',
         image: 'https://joshuarainbow.co.uk' + this.$page.allAbout.edges[0].node.cover_image
       })
