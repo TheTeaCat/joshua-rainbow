@@ -58,9 +58,6 @@ export default {
       })
     }
   },
-  mounted(){
-    console.log(this)
-  },
   components: {
     ListeningTo
   }
