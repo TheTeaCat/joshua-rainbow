@@ -19,7 +19,7 @@
       </div>
       <ul class="images-ul">
         <li v-for="image of $page.photography.images" :key="image" class="image-li">
-          <g-image :src="image" class="image" :alt="'An image from the servies \'' + $page.photography.title + '\''"/>
+          <img :src="image" class="image" :alt="'An image from the servies \'' + $page.photography.title + '\''"/>
         </li>
       </ul>
     </main>
