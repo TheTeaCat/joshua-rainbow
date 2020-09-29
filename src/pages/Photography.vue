@@ -33,6 +33,9 @@ query {
       }
     }
   }
+  metadata {
+    siteName
+  }
 }
 </page-query>
 
@@ -41,7 +44,7 @@ export default {
   metaInfo() {
     return {
       ...this.$ogp({
-        title: this.$static.metaData.siteName + ' - Photography Categories',
+        title: this.$page.metadata.siteName + ' - Photography Categories',
         description: 'Photography by Joshua Rainbow O\'Sullivan',
         image: 'https://joshuarainbow.co.uk' + this.$page.allAbout.edges[0].node.cover_image
       })

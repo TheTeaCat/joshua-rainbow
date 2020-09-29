@@ -42,6 +42,9 @@ query {
       }
     }
   }
+  metadata {
+    siteName
+  }
 }
 </page-query>
 
@@ -52,7 +55,7 @@ export default {
   metaInfo() {
     return {
       ...this.$ogp({
-        title: this.$static.metaData.siteName + ' - About',
+        title: this.$page.metadata.siteName + ' - About',
         description: this.$page.allAbout.edges[0].node.bio,
         image: 'https://joshuarainbow.co.uk' + this.$page.allAbout.edges[0].node.cover_image
       })

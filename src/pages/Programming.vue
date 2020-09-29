@@ -44,6 +44,9 @@ query($page: Int) {
       }
     }
   }
+  metadata {
+    siteName
+  }
 }
 </page-query>
 
@@ -52,11 +55,14 @@ export default {
   metaInfo() {
     return {
       ...this.$ogp({
-        title: this.$static.metaData.siteName + ' - Programming Projects',
+        title: this.$page.metadata.siteName + ' - Programming Projects',
         description: 'Programming Projects of Joshua Rainbow O\'Sullivan',
         image: 'https://joshuarainbow.co.uk' + this.$page.allAbout.edges[0].node.cover_image
       })
     }
+  },
+  mounted() {
+    console.log(this.$static)
   }
 }
 </script>
