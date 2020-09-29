@@ -67,7 +67,7 @@ export default {
     return {
       ...this.$ogp({
         title: this.$page.categories.title,
-        description: this.$page.categories.title + ' - Photography by Joshua Rainbow O\'Sullivan',
+        description: 'Photography by Joshua Rainbow O\'Sullivan',
         image: 'https://joshuarainbow.co.uk' + this.$page.allAbout.edges[0].node.cover_image
       })
     }
