@@ -49,8 +49,17 @@ query {
 import ListeningTo from '../components/ListeningTo.vue'
 
 export default {
-  metaInfo: {
-    title: 'About'
+  metaInfo() {
+    return {
+      ...this.$ogp({
+        title: this.$page.allAbout.edges[0].node.name + ' - About',
+        description: this.$page.allAbout.edges[0].node.bio,
+        image: 'https://joshuarainbow.co.uk/' + this.$page.allAbout.edges[0].node.cover_image
+      })
+    }
+  },
+  mounted(){
+    console.log(this)
   },
   components: {
     ListeningTo

@@ -93,14 +93,17 @@ module.exports = {
           }
         }
       }
-    }    
+    },
+    {
+      use: 'gridsome-plugin-ogp'
+    }
   ],
   transformers: {
     remark: {
       imageQuality: 90,
     }
   },
-  siteUrl: 'http://joshuarainbow.co.uk/',
+  siteUrl: 'https://joshuarainbow.co.uk/',
   pathPrefix: '/',
   chainWebpack (config) {
     // Load variables for all vue-files

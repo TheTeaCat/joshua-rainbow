@@ -43,8 +43,14 @@ query Photography ($path: String!) {
 
 <script>
 export default {
-  metaInfo: {
-    title: 'Photography'
+  metaInfo() {
+    return {
+      ...this.$ogp({
+        title: this.$page.photography.category.title,
+        description: this.$page.photography.description.length,
+        image: 'https://joshuarainbow.co.uk/' + this.$page.photography.images[0]
+      })
+    }
   }
 }
 </script>

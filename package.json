@@ -18,6 +18,7 @@
     "gh-pages": "^2.2.0",
     "gridsome": "^0.7.20",
     "gridsome-cli": "0.0.1",
+    "gridsome-plugin-ogp": "0.0.14",
     "vue-axios": "^2.1.5"
   },
   "devDependencies": {

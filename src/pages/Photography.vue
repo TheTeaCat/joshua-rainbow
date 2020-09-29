@@ -26,14 +26,27 @@ query {
       }
     }
   }
+  allAbout {
+    edges {
+      node {
+        cover_image
+      }
+    }
+  }
 }
 </page-query>
 
 <script>
 export default {
-  metaInfo: {
-    title: 'Photography'
-  }
+  metaInfo() {
+    return {
+      ...this.$ogp({
+        title: 'Photography Categories',
+        description: 'Photography by Joshua Rainbow O\'Sullivan',
+        image: 'https://joshuarainbow.co.uk/' + this.$page.allAbout.edges[0].node.cover_image
+      })
+    }
+  },
 }
 </script>
 

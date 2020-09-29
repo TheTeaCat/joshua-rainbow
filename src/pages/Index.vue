@@ -56,8 +56,14 @@ query {
 
 <script>
 export default {
-  metaInfo: {
-    title: 'Home'
+  metaInfo() {
+    return {
+      ...this.$ogp({
+        title: "Home",
+        description: 'Featured page: ' + this.$page.allFrontPage.edges[0].node.featured_pages[0].title,
+        image: 'https://joshuarainbow.co.uk/' + this.$page.allFrontPage.edges[0].node.featured_pages[0].cover_image
+      })
+    }
   },
   data() {return{
     displayed_tile:0,

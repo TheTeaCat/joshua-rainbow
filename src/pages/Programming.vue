@@ -37,13 +37,26 @@ query($page: Int) {
       }
     }
   }
+  allAbout {
+    edges {
+      node {
+        cover_image
+      }
+    }
+  }
 }
 </page-query>
 
 <script>
 export default {
-  metaInfo: {
-    title: 'Programming'
+  metaInfo() {
+    return {
+      ...this.$ogp({
+        title: 'Programming Projects',
+        description: 'Programming Projects of Joshua Rainbow O\'Sullivan',
+        image: 'https://joshuarainbow.co.uk/' + this.$page.allAbout.edges[0].node.cover_image
+      })
+    }
   }
 }
 </script>

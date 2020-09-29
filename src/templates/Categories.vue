@@ -11,7 +11,7 @@
           <span class="text link">Categories</span>
         </g-link>
         <h1 class="title">
-          {{$page.categories.title}}
+          {{ $page.categories.title }}
         </h1>
       </div>
       <ul class="series-list">
@@ -51,13 +51,26 @@ query ($path: String!) {
       }
     }
   }
+  allAbout {
+    edges {
+      node {
+        cover_image
+      }
+    }
+  }
 }
 </page-query>
 
 <script>
 export default {
-  metaInfo: {
-    title: 'Photography'
+  metaInfo() {
+    return {
+      ...this.$ogp({
+        title: this.$page.categories.title,
+        description: $page.categories.title + ' - Photography by Joshua Rainbow O\'Sullivan',
+        image: 'https://joshuarainbow.co.uk/' + this.$page.allAbout.edges[0].node.cover_image
+      })
+    }
   }
 }
 </script>
