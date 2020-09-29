@@ -51,6 +51,15 @@ query {
       }
     }
   }
+  allAbout {
+    edges {
+      node {
+        name
+        cover_image
+        bio
+      }
+    }
+  }
 }
 </page-query>
 
@@ -59,9 +68,9 @@ export default {
   metaInfo() {
     return {
       ...this.$ogp({
-        title: "Home",
-        description: 'Featured page: ' + this.$page.allFrontPage.edges[0].node.featured_pages[0].title,
-        image: 'https://joshuarainbow.co.uk' + this.$page.allFrontPage.edges[0].node.featured_pages[0].cover_image
+        title: this.$page.allAbout.edges[0].node.name + ' - About',
+        description: this.$page.allAbout.edges[0].node.bio,
+        image: 'https://joshuarainbow.co.uk' + this.$page.allAbout.edges[0].node.cover_image
       })
     }
   },
