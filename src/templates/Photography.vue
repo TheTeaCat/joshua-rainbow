@@ -48,7 +48,7 @@ export default {
       ...this.$ogp({
         title: this.$page.photography.category.title,
         description: this.$page.photography.description.length,
-        image: 'https://joshuarainbow.co.uk/' + this.$page.photography.images[0]
+        image: 'https://joshuarainbow.co.uk' + this.$page.photography.images[0]
       })
     }
   }

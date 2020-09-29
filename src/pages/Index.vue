@@ -61,7 +61,7 @@ export default {
       ...this.$ogp({
         title: "Home",
         description: 'Featured page: ' + this.$page.allFrontPage.edges[0].node.featured_pages[0].title,
-        image: 'https://joshuarainbow.co.uk/' + this.$page.allFrontPage.edges[0].node.featured_pages[0].cover_image
+        image: 'https://joshuarainbow.co.uk' + this.$page.allFrontPage.edges[0].node.featured_pages[0].cover_image
       })
     }
   },
