@@ -46,7 +46,7 @@ export default {
   metaInfo() {
     return {
       ...this.$ogp({
-        title: this.$page.photography.category.title,
+        title: this.$page.photography.title,
         description: this.$page.photography.description,
         image: 'https://joshuarainbow.co.uk' + this.$page.photography.images[0]
       })
