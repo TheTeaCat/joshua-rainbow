@@ -34,6 +34,7 @@ fields:
     time_format: ''
     export_format: ''
     required: true
+    display_utc: true
   default: ''
 pages:
 - content/programming/COM1008-Assignment-2.md
