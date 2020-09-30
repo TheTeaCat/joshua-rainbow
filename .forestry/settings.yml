@@ -13,8 +13,10 @@ sections:
 - type: directory
   path: content/programming
   label: Programming
-  create: all
+  create: documents
   match: "**/*"
+  templates:
+  - programming-page
 - type: directory
   path: content/photography
   label: Photography
@@ -23,11 +25,6 @@ sections:
   new_doc_ext: json
   templates:
   - photography-page
-- type: directory
-  path: content/darkroom
-  label: Darkroom
-  create: all
-  match: "**/*"
 upload_dir: static/media
 public_path: "/media"
 front_matter_path: ''
