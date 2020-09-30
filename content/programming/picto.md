@@ -1,7 +1,7 @@
 ---
 title: picto
 link: http://picto.uk/
-date: 2020-03-31T23:00:00Z
+date: 2020-04-01T00:00:00Z
 cover_image: "/media/2020/09/23/picto.png"
 short_description: A drawing-based chat service, built as a Vue Progressive Web App
   with a Golang based app server.
