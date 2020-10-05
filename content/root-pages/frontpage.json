@@ -2,22 +2,22 @@
   "featured_pages": [
     {
       "title": "The Little Bell",
-      "cover_image": "/media/2020/09/20/cufdporzqxrolkp29oro.jpg",
+      "cover_image": "../../static/media/2020/09/20/cufdporzqxrolkp29oro.jpg",
       "link": "/photography/2020/the-little-bell/"
     },
     {
       "title": "Corrine Leland",
-      "cover_image": "/media/2020/09/20/GNEEjg4eey02HOhEBn1s.jpg",
+      "cover_image": "../../static/media/2020/09/20/GNEEjg4eey02HOhEBn1s.jpg",
       "link": "/photography/galleries-and-artists/corrine-leland/"
     },
     {
       "title": "Cyprus",
-      "cover_image": "/media/2020/09/20/MHjYheJqdOenq0hkoWoF.jpg",
+      "cover_image": "../../static/media/2020/09/20/MHjYheJqdOenq0hkoWoF.jpg",
       "link": "/photography/personal/cyprus/"
     },
     {
       "title": "Databending",
-      "cover_image": "/media/2020/09/20/TIixjYp0Y9b5ERJukTlc.jpg",
+      "cover_image": "../../static/media/2020/09/20/TIixjYp0Y9b5ERJukTlc.jpg",
       "link": "/photography/old-school-work/databending/"
     }
   ]

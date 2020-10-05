@@ -1,6 +1,6 @@
 ---
 title: ShefUniPhotosoc Website
-cover_image: "/media/2020/09/30/photosoc-logo.png"
+cover_image: "../../static/media/2020/09/30/photosoc-logo.png"
 short_description: A new website for The University of Sheffield's Photographic Society,
   built using a Gridsome + Forestry.io jamstack.
 link: http://photosoc.union.shef.ac.uk/

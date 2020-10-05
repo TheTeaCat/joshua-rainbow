@@ -3,9 +3,9 @@
   "title": "Works In Progress",
   "category": "2020",
   "description": "Images, or parts of series, that I am yet to complete.",
-  "cover_image": "/media/2020/09/20/uueVLvzaYeGFnrDwf4sQ.jpg",
+  "cover_image": "../../static/media/2020/09/20/uueVLvzaYeGFnrDwf4sQ.jpg",
   "images": [
-    "/media/2020/09/20/uueVLvzaYeGFnrDwf4sQ.jpg",
-    "/media/2020/09/20/XfNgdcbdMT0hEGSQXLHq.jpg"
+    "../../static/media/2020/09/20/uueVLvzaYeGFnrDwf4sQ.jpg",
+    "../../static/media/2020/09/20/XfNgdcbdMT0hEGSQXLHq.jpg"
   ]
 }

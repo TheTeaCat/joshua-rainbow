@@ -48,7 +48,7 @@ module.exports = {
       use: '@gridsome/source-filesystem',
       options: {
         path: 'about.json',
-        baseDir: './content/',
+        baseDir: './content/root-pages/',
         typeName: 'About'
       }
     },
@@ -56,7 +56,7 @@ module.exports = {
       use: '@gridsome/source-filesystem',
       options: {
         path: 'frontpage.json',
-        baseDir: './content/',
+        baseDir: './content/root-pages/',
         typeName: 'FrontPage'
       }
     },

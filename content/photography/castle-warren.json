@@ -3,10 +3,10 @@
   "title": "Castle Warren",
   "category": "2019",
   "description": "Castle Warren, Carrigaline, Cork.",
-  "cover_image": "/media/2020/09/20/Du3jmMGkd5hlSQOgY3E9.jpg",
+  "cover_image": "../../static/media/2020/09/20/Du3jmMGkd5hlSQOgY3E9.jpg",
   "images": [
-    "/media/2020/09/20/qTpseph9FdLXO2rTVBb7.jpg",
-    "/media/2020/09/20/Du3jmMGkd5hlSQOgY3E9.jpg",
-    "/media/2020/09/20/h9Z9xbAweaja9nFnGRv9.jpg"
+    "../../static/media/2020/09/20/qTpseph9FdLXO2rTVBb7.jpg",
+    "../../static/media/2020/09/20/Du3jmMGkd5hlSQOgY3E9.jpg",
+    "../../static/media/2020/09/20/h9Z9xbAweaja9nFnGRv9.jpg"
   ]
 }

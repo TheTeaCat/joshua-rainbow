@@ -18,8 +18,8 @@
         </div>
       </div>
       <ul class="images-ul">
-        <li v-for="image of $page.photography.images" :key="image" class="image-li">
-          <img :src="image" class="image" :alt="'An image from the servies \'' + $page.photography.title + '\''"/>
+        <li v-for="[i, image] of $page.photography.images.entries()" :key="i" class="image-li">
+          <g-image :src="image" class="image" :alt="'An image from the servies \'' + $page.photography.title + '\''"/>
         </li>
       </ul>
     </main>

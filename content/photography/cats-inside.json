@@ -3,13 +3,13 @@
   "title": "Cats Inside",
   "category": "2019",
   "description": "Cats Inside 24/7.",
-  "cover_image": "/media/2020/09/20/X1svOoRPzSyQ4rkrtCYt.jpg",
+  "cover_image": "../../static/media/2020/09/20/X1svOoRPzSyQ4rkrtCYt.jpg",
   "images": [
-    "/media/2020/09/20/X1svOoRPzSyQ4rkrtCYt.jpg",
-    "/media/2020/09/20/AoHQlshnuEAM1vUmI4ZL.jpg",
-    "/media/2020/09/20/QwYsOGwXeCyuTgyOhumQ.jpg",
-    "/media/2020/09/20/Q7PYWYNEOjiRpW5W41pf.jpg",
-    "/media/2020/09/20/uWQnEOFqhSeke7vpsZCr.jpg",
-    "/media/2020/09/20/x9zzDmBzHuCyt7U6s0Zx.jpg"
+    "../../static/media/2020/09/20/X1svOoRPzSyQ4rkrtCYt.jpg",
+    "../../static/media/2020/09/20/AoHQlshnuEAM1vUmI4ZL.jpg",
+    "../../static/media/2020/09/20/QwYsOGwXeCyuTgyOhumQ.jpg",
+    "../../static/media/2020/09/20/Q7PYWYNEOjiRpW5W41pf.jpg",
+    "../../static/media/2020/09/20/uWQnEOFqhSeke7vpsZCr.jpg",
+    "../../static/media/2020/09/20/x9zzDmBzHuCyt7U6s0Zx.jpg"
   ]
 }
