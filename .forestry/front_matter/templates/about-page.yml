@@ -51,5 +51,3 @@ fields:
     max: 
     labelField: platform
   label: Social Links
-pages:
-- content/about.json
