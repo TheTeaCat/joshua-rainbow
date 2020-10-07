@@ -71,7 +71,7 @@ export default {
       ...this.$ogp({
         title: this.$page.categories.title,
         description: 'Photography by Joshua Rainbow O\'Sullivan',
-        image: 'https://joshuarainbow.co.uk' + this.$page.allAbout.edges[0].node.cover_image
+        image: 'https://joshuarainbow.co.uk' + this.$page.allAbout.edges[0].node.cover_image.src,
       })
     }
   }

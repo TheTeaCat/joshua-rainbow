@@ -57,7 +57,7 @@ export default {
       ...this.$ogp({
         title: "About",
         description: this.$page.allAbout.edges[0].node.bio,
-        image: 'https://joshuarainbow.co.uk' + this.$page.allAbout.edges[0].node.cover_image
+        image: 'https://joshuarainbow.co.uk' + this.$page.allAbout.edges[0].node.cover_image.src,
       })
     }
   },
