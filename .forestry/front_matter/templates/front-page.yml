@@ -25,5 +25,3 @@ fields:
     max: 
     labelField: title
   label: Featured Pages
-pages:
-- content/frontpage.json

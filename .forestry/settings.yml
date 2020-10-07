@@ -5,16 +5,16 @@ admin_path: ''
 webhook_url: 
 sections:
 - type: document
-  path: content/frontpage.json
+  path: content/root-pages/frontpage.json
   label: Front Page
 - type: document
-  path: content/about.json
+  path: content/root-pages/about.json
   label: About
 - type: directory
   path: content/programming
   label: Programming
   create: documents
-  match: "**/*"
+  match: "*"
   templates:
   - programming-page
 - type: directory
