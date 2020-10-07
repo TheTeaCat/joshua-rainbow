@@ -26,10 +26,12 @@ query {
       }
     }
   }
-  allAbout {
+  allFrontPage {
     edges {
       node {
-        cover_image
+        featured_pages {
+          cover_image
+        }
       }
     }
   }
@@ -46,7 +48,7 @@ export default {
       ...this.$ogp({
         title: "Photography Categories",
         description: 'Photography by Joshua Rainbow O\'Sullivan',
-        image: 'https://joshuarainbow.co.uk' + this.$page.allAbout.edges[0].node.cover_image.src,
+        image: 'https://joshuarainbow.co.uk' + this.$page.allFrontPage.edges[0].node.featured_pages[0].cover_image.src,
       })
     }
   },
