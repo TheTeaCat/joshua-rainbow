@@ -63,7 +63,7 @@ export default {
   metaInfo() {
     return {
       ...this.$ogp({
-        title: this.$page.metadata.siteName,
+        title: "Home",
         description: this.$page.metadata.siteDescription,
         image: 'https://joshuarainbow.co.uk' + this.$page.allFrontPage.edges[0].node.featured_pages[0].cover_image
       })

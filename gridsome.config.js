@@ -18,7 +18,7 @@ function addStyleResource (rule) {
 
 module.exports = {
   siteName: 'Joshua Rainbow',
-  siteDescription: 'Photography and Programming Projects',
+  siteDescription: 'Photography and Programming Projects by Joshua Rainbow O\'Sullivan',
   plugins: [
     {
       use: '@gridsome/source-filesystem',
