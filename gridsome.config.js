@@ -76,15 +76,15 @@ module.exports = {
             changefreq: 'monthly',
             priority: 1
           },
-          '/contact': {
+          '/about': {
             changefreq: 'monthly',
             priority: 0.9
           },
-          '/photography/**': {
+          '/photography/*': {
             changefreq: 'monthly',
             priority: 0.8
           },
-          '/darkroom/**': {
+          '/photography/*/*': {
             changefreq: 'monthly',
             priority: 0.7
           },
