@@ -64,7 +64,7 @@ export default {
     align-self: stretch;
 
     padding: $spacer*4 $spacer*2 $spacer*3 $spacer*2;
-    border-bottom: 1px dotted $text-colour;
+    border-bottom: $border-style;
 
     .header-nav {
       display:inline;

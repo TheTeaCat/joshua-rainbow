@@ -30,7 +30,8 @@ img {
         content:" ";
         position: absolute;
         left:0; bottom:0;
-        border-bottom: 1px solid $highlight-colour;
+        border-bottom: $border-style;
+        border-color: $highlight-colour;
         width:0;
         transition: 0.5s width ease;
     }

@@ -2,6 +2,8 @@ $bg: #fff;
 $text-colour: #000;
 $highlight-colour: #707;
 
+$border-style: 1px dotted $text-colour;
+
 $spacer: 4px;
 @media(orientation:portrait) {
     $spacer: 4px;

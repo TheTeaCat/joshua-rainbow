@@ -140,7 +140,7 @@ export default {
         padding: $spacer*2;
       }
 
-      border-top: 1px dotted $text-colour;
+      border-top: $border-style;
 
       .image-link {
         flex-basis:50%;

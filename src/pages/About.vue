@@ -123,8 +123,8 @@ export default {
         margin-bottom: $spacer*3;
         padding: $spacer*3 0;
 
-        border-top: 1px dotted $text-colour;
-        border-bottom: 1px dotted $text-colour;
+        border-top: $border-style;
+        border-bottom: $border-style;
 
         text-align: center;
       }
@@ -147,7 +147,7 @@ export default {
       .listening-to {
         width:100%;
         padding-top:$spacer*2;
-        border-top: 1px dotted $text-colour;
+        border-top: $border-style;
       }
     }
   }
