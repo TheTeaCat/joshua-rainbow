@@ -163,6 +163,7 @@ export default {
           transform:translate(-50%, -50%);
           max-width:100%;
           max-height:100%;
+          user-select:none;
         }
       }
     }
