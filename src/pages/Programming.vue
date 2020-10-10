@@ -4,7 +4,7 @@
       <ol class="programming-ol">
         <li v-for="edge of $page.allProgramming.edges" :key="edge.node.id" class="programming-li">
           <g-link class="cover-image-cont" :to="edge.node.link" tabindex="-1">
-            <g-image class="cover-image" :src="edge.node.cover_image" :alt="edge.node.title"/>
+            <g-image class="cover-image" :src="edge.node.cover_image" :alt="edge.node.title" immediate="true"/>
           </g-link>
           <div class="info">
             <h2 class="title"><g-link class="link" :to="edge.node.link">{{ edge.node.title }}</g-link></h2>
@@ -30,7 +30,7 @@ query($page: Int) {
       node {
         id
         title
-        cover_image
+        cover_image(width:200, height:200, fit:contain, background:"rgba(0,0,0,0)")
         date(format:"DD-MM-YYYY")
         short_description
         link        
