@@ -33,7 +33,7 @@ query {
     edges {
       node {
         name
-        cover_image
+        cover_image(quality:90)
         bio
         social_links {
           link

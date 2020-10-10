@@ -45,7 +45,7 @@ query ($path: String!) {
             title
             description
             path
-            cover_image
+            cover_image(quality:90)
           }
         }
       }

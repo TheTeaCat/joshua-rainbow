@@ -48,7 +48,7 @@ query {
         featured_pages {
           title
           link
-          cover_image
+          cover_image(quality:90)
         }
       }
     }

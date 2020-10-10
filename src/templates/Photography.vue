@@ -36,7 +36,7 @@ query Photography ($path: String!) {
       path
     }
     description
-    images
+    images(quality:90)
   }
 }
 </page-query>
