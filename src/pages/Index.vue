@@ -2,6 +2,8 @@
   <Layout>
     <main class="main">
       <ul class="featured-pages-ul">
+        <div class="next-gallery-touchtarget" @click="next"/>
+        <div class="prev-gallery-touchtarget" @click="prev"/>
         <li v-for="[i, featured_page] of $page.allFrontPage.edges[0].node.featured_pages.entries()"
             :key="featured_page.title"
             class="featured-pages-li"
@@ -118,6 +120,24 @@ export default {
     flex-direction: column;
     align-items: center;
 
+    padding-bottom:$spacer*8;
+
+    position:relative;
+    .next-gallery-touchtarget, .prev-gallery-touchtarget {
+      position:absolute;
+      width:33%;height:100%;
+      top:0;
+      z-index:1;
+    }
+    .next-gallery-touchtarget {
+      right:0;
+      cursor:e-resize;
+    }
+    .prev-gallery-touchtarget {
+      left:0;
+      cursor:w-resize;
+    }
+
     .featured-pages-li {
       flex-grow:1;
 
@@ -154,7 +174,7 @@ export default {
     display:flex;
     justify-content: space-between;
 
-    padding: $spacer*8 $spacer*2 $spacer*2 $spacer*2;
+    padding: 0 $spacer*2 $spacer*2 $spacer*2;
     box-sizing: border-box;
 
     .featured-page-link {
