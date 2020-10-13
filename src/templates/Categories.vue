@@ -19,7 +19,7 @@
             :key="series.node.id" 
             class="series-li">
           <g-link :to="series.node.path" class="image-link" tabindex="-1">
-            <g-image class="cover-image" :alt="series.node.title" :src="series.node.cover_image" immediate="true"/>
+            <g-image class="cover-image" :alt="series.node.title" :src="series.node.cover_image"/>
           </g-link>
           <div class="info">
             <g-link class="title link" :to="series.node.path">{{ series.node.title }}</g-link>
