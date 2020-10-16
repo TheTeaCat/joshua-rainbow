@@ -72,6 +72,7 @@ export default {
     transform:translate(-50%,-50%);
     stroke-width:0.01;
     display:none;
+    z-index:-1;
   }
 
   .header {
