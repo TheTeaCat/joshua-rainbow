@@ -120,7 +120,7 @@ export default {
     flex-direction: column;
     align-items: center;
 
-    padding-bottom:$spacer*8;
+    padding-bottom:$spacer*4;
 
     position:relative;
     .next-gallery-touchtarget, .prev-gallery-touchtarget {
