@@ -128,8 +128,6 @@ export default {
         position:relative;
         .logo-highlight {
           display:block;
-          filter:contrast(1);
-          transition: 0.5s ease filter;
         }
       }
 
@@ -192,12 +190,6 @@ export default {
 
       .header {        
         background: rgba(255,255,255,0.9);
-
-        .site-title {
-          .logo-highlight {
-            filter:contrast(0);
-          }
-        }
         
         .header-nav {
           background: rgba(255,255,255,0.9);
