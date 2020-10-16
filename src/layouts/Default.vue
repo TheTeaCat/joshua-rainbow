@@ -16,9 +16,9 @@
       <nav class="header-nav">
         <ul class="header-links">
           <li class="header-link-li"><g-link class="header-link link" to="/"><Logo class="logo-highlight" />Home</g-link></li>
-          <li class="header-link-li"><g-link class="header-link link" to="/photography/"><Logo class="logo-highlight" />Photography</g-link></li>
-          <li class="header-link-li"><g-link class="header-link link" to="/programming/"><Logo class="logo-highlight" />Programming</g-link></li>
-          <li class="header-link-li"><g-link class="header-link link" to="/about/"><Logo class="logo-highlight" />About</g-link></li>
+          <li class="header-link-li"><g-link class="header-link link not-root" to="/photography/"><Logo class="logo-highlight" />Photography</g-link></li>
+          <li class="header-link-li"><g-link class="header-link link not-root" to="/programming/"><Logo class="logo-highlight" />Programming</g-link></li>
+          <li class="header-link-li"><g-link class="header-link link not-root" to="/about/"><Logo class="logo-highlight" />About</g-link></li>
         </ul>
       </nav>
     </header>
@@ -92,7 +92,7 @@ export default {
           
           .header-link {
             @include sansItalic();
-            &.active--exact {
+            &.active.not-root, &.active--exact {
               @media(min-width:$breakpoint-1-width) {
                 color:$text-colour;
                 .logo-highlight {
