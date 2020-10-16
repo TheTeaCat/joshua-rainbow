@@ -1,8 +1,8 @@
 <template>
   <div :class="{ 'layout':true, 'nav-shown':nav_shown }">
     <header class="header">
+      <span class="site-title" @click="toggleNav"><Logo class="logo-highlight" />{{ $static.metadata.siteName }}</span>
       <div class="hamburger-button" @click="toggleNav">
-        <span class="link">{{ $static.metadata.siteName }}</span>
         <svg xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" class="hamburger-icon">
           <line x1="0%" y1="16.6%" x2="100%" y2="16.6%" stroke-width="0.5px"/>
           <line x1="0%" y1="50%" x2="100%" y2="50%" stroke-width="0.5px"/>
@@ -15,10 +15,10 @@
       </div>
       <nav class="header-nav">
         <ul class="header-links">
-          <li class="header-link-li"><g-link class="header-link link" to="/">Home</g-link></li>
-          <li class="header-link-li"><g-link class="header-link link" to="/photography/">Photography</g-link></li>
-          <li class="header-link-li"><g-link class="header-link link" to="/programming/">Programming</g-link></li>
-          <li class="header-link-li"><g-link class="header-link link" to="/about/">About</g-link></li>
+          <li class="header-link-li"><g-link class="header-link link" to="/"><Logo class="logo-highlight" />Home</g-link></li>
+          <li class="header-link-li"><g-link class="header-link link" to="/photography/"><Logo class="logo-highlight" />Photography</g-link></li>
+          <li class="header-link-li"><g-link class="header-link link" to="/programming/"><Logo class="logo-highlight" />Programming</g-link></li>
+          <li class="header-link-li"><g-link class="header-link link" to="/about/"><Logo class="logo-highlight" />About</g-link></li>
         </ul>
       </nav>
     </header>
@@ -35,7 +35,12 @@ query {
 </static-query>
 
 <script>
+import Logo from "~/assets/svgs/logo.svg"
+
 export default {
+  components: {
+    Logo
+  },
   data() {return {
     nav_shown:false,
   }},
@@ -60,6 +65,15 @@ export default {
   max-width:1280px;
   margin: 0 auto;
 
+  .logo-highlight {
+    position:absolute;
+    top:50%;left:50%;
+    height:200%;width:auto;
+    transform:translate(-50%,-50%);
+    stroke-width:0.01;
+    display:none;
+  }
+
   .header {
     align-self: stretch;
 
@@ -78,11 +92,22 @@ export default {
           
           .header-link {
             @include sansItalic();
+            &.active--exact {
+              @media(min-width:$breakpoint-1-width) {
+                color:$text-colour;
+                .logo-highlight {
+                  display: block;
+                }
+                &::after {
+                  display:none;
+                }
+              }
+            }
           }
         }
       }
     }
-    .hamburger-button {
+    .hamburger-button, .site-title {
       display:none;
     }
   }
@@ -90,22 +115,30 @@ export default {
   @media(max-width:$breakpoint-1-width) {
     .header {
       z-index:1;
-      
-      .hamburger-button {
-        margin-left: $spacer;
 
-        display:inline-flex;
+      margin: 0 $spacer;
 
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .site-title {
+        display:inline-block;
         @include sansItalic();
-
-        .link {
-          margin-top:$spacer/2;
+        position:relative;
+        .logo-highlight {
+          display:block;
+          filter:contrast(1);
+          transition: 0.5s ease filter;
         }
+      }
+
+      .hamburger-button {
+        display:inline-block;
 
         .hamburger-icon, .cross-icon {
           stroke: $text-colour;
           transition: stroke 0.5s ease;
-          margin-left: $spacer*2;
         }
         .cross-icon {
           display:none;
@@ -144,6 +177,9 @@ export default {
             padding: $spacer 0;
             .header-link {
               @include sansItalicLarge();
+              .logo-highlight {
+                display:none !important;
+              }
             }
           }
         }
@@ -156,6 +192,12 @@ export default {
 
       .header {        
         background: rgba(255,255,255,0.9);
+
+        .site-title {
+          .logo-highlight {
+            filter:contrast(0);
+          }
+        }
         
         .header-nav {
           background: rgba(255,255,255,0.9);
