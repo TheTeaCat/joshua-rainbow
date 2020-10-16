@@ -19,6 +19,7 @@ body {
 //Required so g-images don't set their width as the actual image width.
 img {
     width:unset;
+    object-fit:contain;
 }
 
 .link {
