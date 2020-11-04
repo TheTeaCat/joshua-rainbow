@@ -70,9 +70,9 @@ export default {
     top:50%;left:50%;
     height:200%;width:auto;
     transform:translate(-50%,-50%);
-    stroke-width:0.01;
     display:none;
     z-index:-1;
+    filter:contrast(0.2) brightness(1.8)
   }
 
   .header {

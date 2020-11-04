@@ -5,8 +5,12 @@
    viewBox="0 0 135 100"
    overflow="visible">
 
+	<style>
+		path{stroke-width:1px;}
+	</style>
+
   <defs>
-    <path id="sine-curve" fill="none"
+    <path id="sine-curve" fill="none" vector-effect='non-scaling-stroke'
         d="M -6.544985,-0.258819
           C -6.457519,-0.174333 -6.370353,-0.087168 -6.283185,0.000000
           C -6.081330,0.201855 -5.879645,0.403537 -5.674080,0.572134
