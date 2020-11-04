@@ -1,6 +1,7 @@
 <template>
   <Layout>
     <main class="main">
+      <Logo class="logo-bg"/>
       <div class="about-cont">
         <div class="cover-image-cont">
         <g-image alt="A photograph of Josh" 
@@ -50,6 +51,7 @@ query {
 
 <script>
 import ListeningTo from '../components/ListeningTo.vue'
+import Logo from "~/assets/svgs/logo.svg"
 
 export default {
   metaInfo() {
@@ -62,7 +64,8 @@ export default {
     }
   },
   components: {
-    ListeningTo
+    ListeningTo,
+    Logo
   }
 }
 </script>
@@ -72,6 +75,14 @@ export default {
   flex-grow:1;
   display:flex;
   align-items: center;
+
+  .logo-bg {
+    position:absolute;
+    z-index:-2;
+    top:0;left:0;
+    width:100%;height:100%;
+    filter:contrast(0.2) brightness(1.8);
+  }
 
   .about-cont {
     width:100%;
