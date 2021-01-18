@@ -1,5 +1,5 @@
 ---
-title: lastfm-tag-cloud
+title: Last.fm Tag Cloud
 link: https://tagcloud.joshuarainbow.co.uk/
 date: 2020-01-21T00:00:00.000+00:00
 cover_image: "../../static/media/2020/09/23/lastfm-tag-cloud.jpg"
