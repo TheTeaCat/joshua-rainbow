@@ -1,10 +1,10 @@
 ---
-title: COM1008-Assignment-2
-link: https://github.com/TheTeaCat/COM1008-Assignment-2
-date: 2018-12-10T00:00:00Z
-cover_image: "../../static/media/2020/09/23/COM1008-Assignment-2.jpg"
-short_description: An assignment @ The University of Sheffield to create a single
-  web page with a vanilla js interactive animal on it.
+title: Spot The Difference
+link: https://devpost.com/software/spot-the-difference
+date: 2020-11-08T00:00:00Z
+cover_image: "../../static/media/2021/01/18/spot-the-difference.jpg"
+short_description: A web app for comparing two people's music tastes using the Spotify
+  API, an AWS backend and Vue frontend.
 
 ---
-An assignment @ The University of Sheffield to create a single web page with a vanilla js interactive animal on it.
+A web app for comparing two people's music tastes using the Spotify API, an AWS backend and Vue frontend.
