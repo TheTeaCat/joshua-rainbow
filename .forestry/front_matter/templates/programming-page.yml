@@ -38,9 +38,6 @@ fields:
   default: ''
 pages:
 - content/programming/COM1008-Assignment-2.md
-- content/programming/COM2004-OCR-Assignment.md
-- content/programming/COM2108-Assignment-3.md
 - content/programming/lastfm-tag-cloud.md
 - content/programming/picto.md
 - content/programming/romanesgo.md
-- content/programming/shefuniphotosoc-website.md
