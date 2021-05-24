@@ -132,8 +132,6 @@ export default {
   }
 
   @media(max-width:$breakpoint-1-width) {
-    align-items: flex-start;
-
     .programming-ol {
       flex-direction: column;
       flex-wrap:nowrap;
